@@ -47,7 +47,7 @@
         <section class="px-8 py-16 text-center">
             <div class="max-w-4xl mx-auto">
                 <h1
-                    class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse">
+                    class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                     Welcome to My Portfolio
                 </h1>
                 <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -109,6 +109,32 @@
                     <p class="text-gray-400 text-lg">โปรเจคที่ทำมาแล้ว 😊</p>
                 </div>
 
+                <!-- Loading -->
+                <div v-if="loading" class="text-center py-12">
+                    <i class="fa-solid fa-spinner fa-spin text-3xl text-green-400 mb-4"></i>
+                    <p class="text-gray-400">กำลังโหลดโปรเจคจาก GitHub...</p>
+                </div>
+
+                <!-- Error -->
+                <div v-else-if="error && pinnedRepos.length === 0" class="text-center py-12">
+                    <i class="fa-solid fa-triangle-exclamation text-3xl text-yellow-400 mb-4"></i>
+                    <p class="text-gray-400 mb-4">{{ error }}</p>
+                    <button @click="fetchRepos"
+                        class="bg-green-500/20 hover:bg-green-500/30 text-green-400 px-6 py-2 rounded-full transition-colors">
+                        ลองใหม่อีกครั้ง
+                    </button>
+                </div>
+
+                <!-- Pinned Project Cards -->
+                <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <PinnedProjectCard v-for="repo in pinnedRepos" :key="repo.id" :repo="repo" />
+                </div>
+
+                <!-- Language Stats -->
+                <div v-if="languageStats.length" class="mt-16 max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold text-center mb-8 text-gray-200">Language Usage</h3>
+                    <LanguageStats :stats="languageStats" />
+                </div>
             </div>
         </section>
 
@@ -117,23 +143,38 @@
             <div class="max-w-4xl mx-auto">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     <div class="p-6">
-                        <div class="text-4xl font-bold text-green-400 mb-2">50+</div>
-                        <div class="text-gray-400">Projects</div>
+                        <div class="text-4xl font-bold text-green-400 mb-2">{{ repos.length || '—' }}</div>
+                        <div class="text-gray-400">Public Repos</div>
                     </div>
                     <div class="p-6">
-                        <div class="text-4xl font-bold text-blue-400 mb-2">3+</div>
-                        <div class="text-gray-400">Years Experience</div>
+                        <div class="text-4xl font-bold text-blue-400 mb-2">{{ totalStars }}</div>
+                        <div class="text-gray-400">Total Stars</div>
                     </div>
                     <div class="p-6">
-                        <div class="text-4xl font-bold text-purple-400 mb-2">100+</div>
-                        <div class="text-gray-400">Happy Clients</div>
+                        <div class="text-4xl font-bold text-purple-400 mb-2">{{ languageStats.length }}</div>
+                        <div class="text-gray-400">Languages</div>
                     </div>
                     <div class="p-6">
-                        <div class="text-4xl font-bold text-yellow-400 mb-2">24/7</div>
-                        <div class="text-gray-400">Support</div>
+                        <div class="text-4xl font-bold text-yellow-400 mb-2">{{ totalForks }}</div>
+                        <div class="text-gray-400">Total Forks</div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 </template>
+
+<script setup>
+const { repos, pinnedRepos, languageStats, loading, error, fetchRepos } = useGitHub()
+
+const totalStars = computed(() =>
+  repos.value.reduce((sum, r) => sum + (r.stargazers_count || 0), 0)
+)
+const totalForks = computed(() =>
+  repos.value.reduce((sum, r) => sum + (r.forks_count || 0), 0)
+)
+
+onMounted(() => {
+  fetchRepos()
+})
+</script>
