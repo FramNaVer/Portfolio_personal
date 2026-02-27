@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "หน้าแรก",
+    "about": "เกี่ยวกับ",
+    "projects": "โปรเจค",
+    "contact": "ติดต่อ"
+  },
+  "hero": {
+    "title": "ยินดีต้อนรับสู่ Portfolio ของผม",
+    "description": "สวัสดีครับ ผม ธนดล อิ่นมะโน นักศึกษาชั้นปีที่ 4 สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้ ผมหลงใหลในงานพัฒนาเว็บไซต์แบบ Full Stack และการเทรนโมเดล AI",
+    "viewWork": "ดูผลงาน",
+    "contactMe": "ติดต่อผม"
+  },
+  "sections": {
+    "programmingLanguages": "Programming Languages",
+    "technologyStack": "Technology Stack",
+    "myProjects": "โปรเจคของผม",
+    "languageUsage": "สัดส่วนภาษาที่ใช้"
+  },
+  "github": {
+    "loading": "กำลังโหลดโปรเจคจาก GitHub...",
+    "retry": "ลองใหม่อีกครั้ง",
+    "publicRepos": "Public Repos",
+    "totalStars": "Total Stars",
+    "languages": "ภาษา",
+    "totalForks": "Total Forks"
+  },
+  "contact": {
+    "title": "ติดต่อผม",
+    "description": "สนใจร่วมงานหรืออยากพูดคุย? ติดต่อผมได้เลยครับ",
+    "email": "อีเมล",
+    "location": "ที่อยู่",
+    "locationValue": "เชียงใหม่, ประเทศไทย"
+  },
+  "footer": {
+    "rights": "สงวนลิขสิทธิ์"
+  },
+  "about": {
+    "title": "เกี่ยวกับผม",
+    "bio1": "สวัสดีครับ ผม {name} นักศึกษาชั้นปีที่ 4 สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้",
+    "bio2": "ผมหลงใหลในงานพัฒนาเว็บไซต์แบบ Full Stack และการเทรนโมเดล AI ชอบเรียนรู้เทคโนโลยีใหม่ๆ และนำมาประยุกต์ใช้ในโปรเจคจริง",
+    "downloadResume": "ดาวน์โหลด Resume",
+    "education": "การศึกษา",
+    "university": "มหาวิทยาลัยแม่โจ้",
+    "major": "สาขาวิทยาการคอมพิวเตอร์",
+    "year": "นักศึกษาชั้นปีที่ 4",
+    "whatIDo": "สิ่งที่ผมทำ",
+    "fullstack": "Full Stack Development",
+    "fullstackDesc": "พัฒนาเว็บแอปพลิเคชันตั้งแต่ Frontend ไปจนถึง Backend ด้วย Vue.js, Nuxt, ASP.NET และ Express.js",
+    "ai": "AI & Machine Learning",
+    "aiDesc": "สนใจด้านการเทรนโมเดล AI และนำ Machine Learning มาใช้แก้ปัญหาจริง ด้วย Python",
+    "uiux": "UI/UX Design",
+    "uiuxDesc": "ออกแบบ UI/UX ด้วย Figma เน้นสร้างประสบการณ์ผู้ใช้ที่ดีและสวยงาม",
+    "devops": "DevOps & Tools",
+    "devopsDesc": "ใช้ Docker, Git, Swagger, Postman ในกระบวนการพัฒนาและ deploy",
+    "cta": "มาร่วมงานกันไหมครับ?",
+    "ctaDesc": "ผมพร้อมเรียนรู้และร่วมสร้างสรรค์ผลงานใหม่ๆ เสมอ",
+    "viewProjects": "ดูโปรเจค"
+  },
+  "seo": {
+    "homeTitle": "Tanadon Inmano | Portfolio",
+    "homeDescription": "Portfolio ของ ธนดล อิ่นมะโน - Full Stack Developer & AI Enthusiast",
+    "aboutTitle": "เกี่ยวกับ | Tanadon Inmano",
+    "aboutDescription": "เรียนรู้เพิ่มเติมเกี่ยวกับ ธนดล อิ่นมะโน - นักศึกษาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้"
+  }
+}
