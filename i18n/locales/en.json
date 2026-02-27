@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Welcome to My Portfolio",
+    "description": "Hi, I'm Tanadon Inmano, a 4th-year Computer Science student at Maejo University. I'm passionate about Full Stack Web Development and AI Model Training.",
+    "viewWork": "View My Work",
+    "contactMe": "Contact Me"
+  },
+  "sections": {
+    "programmingLanguages": "Programming Languages",
+    "technologyStack": "Technology Stack",
+    "myProjects": "My Projects",
+    "languageUsage": "Language Usage"
+  },
+  "github": {
+    "loading": "Loading projects from GitHub...",
+    "retry": "Try Again",
+    "publicRepos": "Public Repos",
+    "totalStars": "Total Stars",
+    "languages": "Languages",
+    "totalForks": "Total Forks"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Interested in working together or want to chat? Feel free to reach out!",
+    "email": "Email",
+    "location": "Location",
+    "locationValue": "Chiang Mai, Thailand"
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  },
+  "about": {
+    "title": "About Me",
+    "bio1": "Hi, I'm {name}, a 4th-year Computer Science student at Maejo University.",
+    "bio2": "I'm passionate about Full Stack Web Development and AI Model Training. I love learning new technologies and applying them to real projects.",
+    "downloadResume": "Download Resume",
+    "education": "Education",
+    "university": "Maejo University",
+    "major": "Computer Science",
+    "year": "4th Year Student",
+    "whatIDo": "What I Do",
+    "fullstack": "Full Stack Development",
+    "fullstackDesc": "Building web applications from Frontend to Backend with Vue.js, Nuxt, ASP.NET, and Express.js.",
+    "ai": "AI & Machine Learning",
+    "aiDesc": "Interested in training AI models and applying Machine Learning to solve real problems with Python.",
+    "uiux": "UI/UX Design",
+    "uiuxDesc": "Designing UI/UX with Figma, focusing on great user experiences and beautiful interfaces.",
+    "devops": "DevOps & Tools",
+    "devopsDesc": "Using Docker, Git, Swagger, and Postman in development and deployment workflows.",
+    "cta": "Let's Work Together!",
+    "ctaDesc": "I'm always ready to learn and create amazing things.",
+    "viewProjects": "View Projects"
+  },
+  "seo": {
+    "homeTitle": "Tanadon Inmano | Portfolio",
+    "homeDescription": "Portfolio of Tanadon Inmano - Full Stack Developer & AI Enthusiast",
+    "aboutTitle": "About | Tanadon Inmano",
+    "aboutDescription": "Learn more about Tanadon Inmano - Computer Science student at Maejo University"
+  }
+}

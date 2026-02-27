@@ -1,114 +1,254 @@
 <template>
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
     <!-- Postman -->
-    <div class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-orange-500/50 hover:shadow-xl hover:shadow-orange-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    <div
+      class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-orange-500/50 hover:shadow-xl hover:shadow-orange-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      </div>
       <div class="text-center relative z-10">
         <div class="relative mb-4">
-          <i class="fa-solid fa-paper-plane text-5xl text-orange-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
-          <div class="absolute inset-0 bg-orange-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <i
+            class="fa-solid fa-paper-plane text-5xl text-orange-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
+          <div
+            class="absolute inset-0 bg-orange-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
         </div>
-        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-orange-300 transition-colors duration-300">Postman</h3>
-        <span class="bg-orange-500/20 text-orange-400 px-4 py-2 rounded-full text-sm font-semibold border border-orange-500/30">Advanced</span>
-        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">API Testing & Development</div>
+        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-orange-300 transition-colors duration-300">Postman
+        </h3>
+        <span
+          class="bg-orange-500/20 text-orange-400 px-4 py-2 rounded-full text-sm font-semibold border border-orange-500/30">Advanced</span>
+        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">API
+          Testing & Development</div>
       </div>
     </div>
 
     <!-- VS Code -->
-    <div class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    <div
+      class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      </div>
       <div class="text-center relative z-10">
         <div class="relative mb-4">
-          <i class="fa-solid fa-code text-5xl text-blue-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
-          <div class="absolute inset-0 bg-blue-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <i
+            class="fa-solid fa-code text-5xl text-blue-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
+          <div
+            class="absolute inset-0 bg-blue-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
         </div>
-        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">VS Code</h3>
-        <span class="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold border border-blue-500/30">Expert</span>
-        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Code Editor & Extensions</div>
+        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">VS Code
+        </h3>
+        <span
+          class="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold border border-blue-500/30">Expert</span>
+        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Code
+          Editor & Extensions</div>
       </div>
     </div>
 
     <!-- Visual Studio -->
-    <div class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    <div
+      class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      </div>
       <div class="text-center relative z-10">
         <div class="relative mb-4">
-          <i class="fa-solid fa-laptop-code text-5xl text-purple-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
-          <div class="absolute inset-0 bg-purple-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <i
+            class="fa-solid fa-laptop-code text-5xl text-purple-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
+          <div
+            class="absolute inset-0 bg-purple-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
         </div>
-        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-300">Visual Studio</h3>
-        <span class="bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm font-semibold border border-purple-500/30">Advanced</span>
-        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">.NET Development IDE</div>
+        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-300">Visual
+          Studio</h3>
+        <span
+          class="bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm font-semibold border border-purple-500/30">Advanced</span>
+        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">.NET
+          Development IDE</div>
       </div>
     </div>
 
     <!-- Figma -->
-    <div class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-pink-500/50 hover:shadow-xl hover:shadow-pink-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    <div
+      class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-pink-500/50 hover:shadow-xl hover:shadow-pink-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      </div>
       <div class="text-center relative z-10">
         <div class="relative mb-4">
-          <i class="fa-brands fa-figma text-5xl text-pink-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
-          <div class="absolute inset-0 bg-pink-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <i
+            class="fa-brands fa-figma text-5xl text-pink-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
+          <div
+            class="absolute inset-0 bg-pink-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
         </div>
-        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-pink-300 transition-colors duration-300">Figma</h3>
-        <span class="bg-pink-500/20 text-pink-400 px-4 py-2 rounded-full text-sm font-semibold border border-pink-500/30">Intermediate</span>
-        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">UI/UX Design Tool</div>
+        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-pink-300 transition-colors duration-300">Figma
+        </h3>
+        <span
+          class="bg-pink-500/20 text-pink-400 px-4 py-2 rounded-full text-sm font-semibold border border-pink-500/30">Intermediate</span>
+        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">UI/UX
+          Design Tool</div>
       </div>
     </div>
 
     <!-- Swagger -->
-    <div class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-green-500/50 hover:shadow-xl hover:shadow-green-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    <div
+      class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-green-500/50 hover:shadow-xl hover:shadow-green-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      </div>
       <div class="text-center relative z-10">
         <div class="relative mb-4">
-          <i class="fa-solid fa-file-code text-5xl text-green-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
-          <div class="absolute inset-0 bg-green-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <i
+            class="fa-solid fa-file-code text-5xl text-green-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
+          <div
+            class="absolute inset-0 bg-green-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
         </div>
-        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-green-300 transition-colors duration-300">Swagger</h3>
-        <span class="bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-semibold border border-green-500/30">Advanced</span>
-        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">API Documentation</div>
+        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-green-300 transition-colors duration-300">Swagger
+        </h3>
+        <span
+          class="bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-semibold border border-green-500/30">Advanced</span>
+        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">API
+          Documentation</div>
       </div>
     </div>
 
     <!-- Docker -->
-    <div class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    <div
+      class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      </div>
       <div class="text-center relative z-10">
         <div class="relative mb-4">
-          <i class="fa-brands fa-docker text-5xl text-cyan-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
-          <div class="absolute inset-0 bg-cyan-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <i
+            class="fa-brands fa-docker text-5xl text-cyan-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
+          <div
+            class="absolute inset-0 bg-cyan-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
         </div>
-        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300">Docker</h3>
-        <span class="bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full text-sm font-semibold border border-cyan-500/30">Intermediate</span>
-        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Containerization</div>
+        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300">Docker
+        </h3>
+        <span
+          class="bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full text-sm font-semibold border border-cyan-500/30">Intermediate</span>
+        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Containerization</div>
       </div>
     </div>
 
     <!-- Git -->
-    <div class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-red-500/50 hover:shadow-xl hover:shadow-red-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    <div
+      class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-red-500/50 hover:shadow-xl hover:shadow-red-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      </div>
       <div class="text-center relative z-10">
         <div class="relative mb-4">
-          <i class="fa-brands fa-git-alt text-5xl text-red-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
-          <div class="absolute inset-0 bg-red-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <i
+            class="fa-brands fa-git-alt text-5xl text-red-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
+          <div
+            class="absolute inset-0 bg-red-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
         </div>
         <h3 class="text-lg font-bold text-white mb-3 group-hover:text-red-300 transition-colors duration-300">Git</h3>
-        <span class="bg-red-500/20 text-red-400 px-4 py-2 rounded-full text-sm font-semibold border border-red-500/30">Advanced</span>
-        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Version Control</div>
+        <span
+          class="bg-red-500/20 text-red-400 px-4 py-2 rounded-full text-sm font-semibold border border-red-500/30">Advanced</span>
+        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Version Control</div>
       </div>
     </div>
 
     <!-- GitHub -->
-    <div class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-gray-400/50 hover:shadow-xl hover:shadow-gray-400/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-gray-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    <div
+      class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-gray-400/50 hover:shadow-xl hover:shadow-gray-400/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-gray-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      </div>
       <div class="text-center relative z-10">
         <div class="relative mb-4">
-          <i class="fa-brands fa-github text-5xl text-gray-300 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
-          <div class="absolute inset-0 bg-gray-300/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <i
+            class="fa-brands fa-github text-5xl text-gray-300 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
+          <div
+            class="absolute inset-0 bg-gray-300/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
         </div>
-        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-gray-200 transition-colors duration-300">GitHub</h3>
-        <span class="bg-gray-500/20 text-gray-300 px-4 py-2 rounded-full text-sm font-semibold border border-gray-500/30">Expert</span>
-        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Code Repository</div>
+        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-gray-200 transition-colors duration-300">GitHub
+        </h3>
+        <span
+          class="bg-gray-500/20 text-gray-300 px-4 py-2 rounded-full text-sm font-semibold border border-gray-500/30">Expert</span>
+        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Code
+          Repository</div>
+      </div>
+    </div>
+
+    <!-- Trello -->
+    <div
+      class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-sky-500/50 hover:shadow-xl hover:shadow-sky-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-sky-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      </div>
+      <div class="text-center relative z-10">
+        <div class="relative mb-4">
+          <i
+            class="fa-brands fa-trello text-5xl text-sky-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
+          <div
+            class="absolute inset-0 bg-sky-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-sky-300 transition-colors duration-300">Trello
+        </h3>
+        <span
+          class="bg-sky-500/20 text-sky-400 px-4 py-2 rounded-full text-sm font-semibold border border-sky-500/30">Intermediate</span>
+        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Project Management</div>
+      </div>
+    </div>
+
+    <!-- MySQL -->
+    <div
+      class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-orange-500/50 hover:shadow-xl hover:shadow-orange-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      </div>
+      <div class="text-center relative z-10">
+        <div class="relative mb-4">
+          <i
+            class="fa-solid fa-database text-5xl text-orange-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
+          <div
+            class="absolute inset-0 bg-orange-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-orange-300 transition-colors duration-300">MySQL
+        </h3>
+        <span
+          class="bg-orange-500/20 text-orange-400 px-4 py-2 rounded-full text-sm font-semibold border border-orange-500/30">Intermediate</span>
+        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Relational Database</div>
+      </div>
+    </div>
+
+    <!-- MongoDB -->
+    <div
+      class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-green-500/50 hover:shadow-xl hover:shadow-green-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      </div>
+      <div class="text-center relative z-10">
+        <div class="relative mb-4">
+          <i
+            class="fa-solid fa-leaf text-5xl text-green-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
+          <div
+            class="absolute inset-0 bg-green-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-green-300 transition-colors duration-300">MongoDB
+        </h3>
+        <span
+          class="bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-semibold border border-green-500/30">Beginner</span>
+        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          NoSQL Database</div>
       </div>
     </div>
   </div>
@@ -128,9 +268,12 @@
 
 /* Pulse animation for icons */
 @keyframes pulse-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     filter: drop-shadow(0 0 8px currentColor);
   }
+
   50% {
     filter: drop-shadow(0 0 16px currentColor) drop-shadow(0 0 32px currentColor);
   }
@@ -148,7 +291,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.02) 50%, transparent 70%);
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.02) 50%, transparent 70%);
   transform: translateX(-100%);
   transition: transform 0.6s ease;
 }

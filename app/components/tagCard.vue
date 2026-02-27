@@ -139,6 +139,34 @@
         <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Node.js Backend</div>
       </div>
     </div>
+
+    <!-- React -->
+    <div class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-sky-500/50 hover:shadow-xl hover:shadow-sky-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-sky-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div class="text-center relative z-10">
+        <div class="relative mb-4">
+          <i class="fab fa-react text-5xl text-sky-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
+          <div class="absolute inset-0 bg-sky-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-sky-300 transition-colors duration-300">React</h3>
+        <span class="bg-sky-500/20 text-sky-400 px-4 py-2 rounded-full text-sm font-semibold border border-sky-500/30">Intermediate</span>
+        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">UI Library</div>
+      </div>
+    </div>
+
+    <!-- Tailwind CSS -->
+    <div class="group relative bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-teal-500/50 hover:shadow-xl hover:shadow-teal-500/25 transition-all duration-500 cursor-pointer transform hover:-translate-y-3 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div class="text-center relative z-10">
+        <div class="relative mb-4">
+          <i class="fas fa-wind text-5xl text-teal-400 mb-3 group-hover:scale-125 transition-all duration-500 group-hover:rotate-12"></i>
+          <div class="absolute inset-0 bg-teal-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-teal-300 transition-colors duration-300">Tailwind CSS</h3>
+        <span class="bg-teal-500/20 text-teal-400 px-4 py-2 rounded-full text-sm font-semibold border border-teal-500/30">Advanced</span>
+        <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Utility-First CSS</div>
+      </div>
+    </div>
   </div>
 </template>
 
