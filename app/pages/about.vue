@@ -62,10 +62,15 @@
                             สวัสดีครับ ผม <span class="text-white font-semibold">ธนดล อิ่นมะโน (Tanadon Inmano)</span>
                             นักศึกษาชั้นปีที่ 4 สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้
                         </p>
-                        <p class="text-gray-400 leading-relaxed">
+                        <p class="text-gray-400 leading-relaxed mb-6">
                             ผมหลงใหลในงานพัฒนาเว็บไซต์แบบ Full Stack และการเทรนโมเดล AI
                             ชอบเรียนรู้เทคโนโลยีใหม่ๆ และนำมาประยุกต์ใช้ในโปรเจคจริง
                         </p>
+                        <a href="/resume.pdf" download
+                            class="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            <i class="fa-solid fa-download"></i>
+                            Download Resume
+                        </a>
                     </div>
                 </div>
             </div>
