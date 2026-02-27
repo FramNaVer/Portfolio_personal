@@ -5,8 +5,8 @@
             <div class="flex items-center justify-between px-8 py-6">
                 <div class="flex items-center gap-4">
                     <div class="relative">
-                        <img src="/profile.png"
-                            class="w-12 h-12 rounded-full ring-2 ring-green-500/50 hover:ring-green-400 transition-all" />
+                        <img src="/Web_personal_profile.jpg"
+                            class="w-12 h-12 rounded-full ring-2 ring-green-500/50 hover:ring-green-400 transition-all object-cover object-center" />
                         <div
                             class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-gray-900">
                         </div>
@@ -24,21 +24,21 @@
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 group-hover:w-full transition-all duration-300"></span>
                     </NuxtLink>
-                    <NuxtLink to="/posts" class="hover:text-green-400 transition-colors relative group">
-                        Posts
+                    <NuxtLink to="/about" class="hover:text-green-400 transition-colors relative group">
+                        About
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 group-hover:w-full transition-all duration-300"></span>
                     </NuxtLink>
-                    <NuxtLink to="/docs" class="hover:text-green-400 transition-colors relative group">
-                        Docs
+                    <a href="#projects" class="hover:text-green-400 transition-colors relative group">
+                        Projects
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 group-hover:w-full transition-all duration-300"></span>
-                    </NuxtLink>
-                    <NuxtLink to="/resources" class="hover:text-green-400 transition-colors relative group">
-                        Resources
+                    </a>
+                    <a href="#contact" class="hover:text-green-400 transition-colors relative group">
+                        Contact
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 group-hover:w-full transition-all duration-300"></span>
-                    </NuxtLink>
+                    </a>
                 </nav>
             </div>
         </header>
@@ -71,11 +71,12 @@
         <!-- Tags Section -->
         <section class="px-8 py-12">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-extrabold text-center mb-8 text-white">
-                    <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
                         Programming Languages
-                    </span>
-                </h2>
+                    </h2>
+                </div>
 
                 <!-- Skills Cards -->
                 <TagCard />
@@ -84,26 +85,29 @@
 
         <section class="px-8 py-12">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-extrabold text-center mb-8 text-white">
-                    <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
                         Technology Stack
-                    </span>
-                </h2>
+                    </h2>
+                    <TagCardTech />
+                </div>
 
-                <!-- Tech Cards -->
-                <TagCardTech />
+                <!-- Skills Cards -->
             </div>
         </section>
 
         <!-- GitHub Projects Section -->
-        <section class="px-8 py-16 bg-gray-800/30">
+        <section id="projects" class="px-8 py-16 bg-gray-800/30 scroll-mt-24">
             <div class="max-w-6xl mx-auto">
                 <!-- Pinned Projects -->
-                <h2 class="text-4xl font-extrabold text-center mb-8 text-white">
-                    <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent drop-shadow-lg">
-                        My Projects
-                    </span>
-                </h2>
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                        📌 My Projects
+                    </h2>
+                    <p class="text-gray-400 text-lg">โปรเจคที่ทำมาแล้ว 😊</p>
+                </div>
 
                 <!-- Loading -->
                 <div v-if="loading" class="text-center py-12">
@@ -157,6 +161,59 @@
                 </div>
             </div>
         </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="px-8 py-20 scroll-mt-24">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                    Get In Touch
+                </h2>
+                <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
+                    สนใจร่วมงานหรืออยากพูดคุย? ติดต่อผมได้เลยครับ
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+                    <!-- Email -->
+                    <a href="mailto:framnaver@gmail.com"
+                        class="group bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-green-500/50 hover:shadow-xl hover:shadow-green-500/10 transition-all duration-300">
+                        <i class="fa-solid fa-envelope text-3xl text-green-400 mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-white font-semibold mb-1">Email</h3>
+                        <p class="text-gray-400 text-sm">framnaver@gmail.com</p>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/FramNaVer" target="_blank"
+                        class="group bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-gray-400/50 hover:shadow-xl hover:shadow-gray-400/10 transition-all duration-300">
+                        <i class="fa-brands fa-github text-3xl text-gray-300 mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-white font-semibold mb-1">GitHub</h3>
+                        <p class="text-gray-400 text-sm">@FramNaVer</p>
+                    </a>
+
+                    <!-- Location -->
+                    <div
+                        class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700">
+                        <i class="fa-solid fa-location-dot text-3xl text-blue-400 mb-3"></i>
+                        <h3 class="text-white font-semibold mb-1">Location</h3>
+                        <p class="text-gray-400 text-sm">Chiang Mai, Thailand</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-gray-700/50 py-8 px-8">
+            <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-sm">&copy; {{ new Date().getFullYear() }} Tanadon Inmano. All rights reserved.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/FramNaVer" target="_blank" class="text-gray-500 hover:text-white transition-colors">
+                        <i class="fa-brands fa-github text-lg"></i>
+                    </a>
+                    <a href="mailto:framnaver@gmail.com" class="text-gray-500 hover:text-white transition-colors">
+                        <i class="fa-solid fa-envelope text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
     </div>
 </template>
 
