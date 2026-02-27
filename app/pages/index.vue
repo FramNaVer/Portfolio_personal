@@ -71,12 +71,11 @@
         <!-- Tags Section -->
         <section class="px-8 py-12">
             <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2
-                        class="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                <h2 class="text-4xl font-extrabold text-center mb-8 text-white">
+                    <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
                         Programming Languages
-                    </h2>
-                </div>
+                    </span>
+                </h2>
 
                 <!-- Skills Cards -->
                 <TagCard />
@@ -85,15 +84,14 @@
 
         <section class="px-8 py-12">
             <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2
-                        class="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                <h2 class="text-4xl font-extrabold text-center mb-8 text-white">
+                    <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
                         Technology Stack
-                    </h2>
-                    <TagCardTech />
-                </div>
+                    </span>
+                </h2>
 
-                <!-- Skills Cards -->
+                <!-- Tech Cards -->
+                <TagCardTech />
             </div>
         </section>
 
@@ -101,13 +99,11 @@
         <section class="px-8 py-16 bg-gray-800/30">
             <div class="max-w-6xl mx-auto">
                 <!-- Pinned Projects -->
-                <div class="text-center mb-12">
-                    <h2
-                        class="text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-                        📌 My Projects
-                    </h2>
-                    <p class="text-gray-400 text-lg">โปรเจคที่ทำมาแล้ว 😊</p>
-                </div>
+                <h2 class="text-4xl font-extrabold text-center mb-8 text-white">
+                    <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent drop-shadow-lg">
+                        My Projects
+                    </span>
+                </h2>
 
                 <!-- Loading -->
                 <div v-if="loading" class="text-center py-12">
