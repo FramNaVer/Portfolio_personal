@@ -5,7 +5,7 @@
             <div class="flex items-center justify-between px-8 py-6">
                 <div class="flex items-center gap-4">
                     <div class="relative">
-                        <img src="/Web_personal_profile.jpg"
+                        <img src="/profile-avatar.jpg"
                             class="w-12 h-12 rounded-full ring-2 ring-green-500/50 hover:ring-green-400 transition-all object-cover object-center" />
                         <div
                             class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-gray-900">
@@ -48,7 +48,7 @@
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <!-- Profile Image -->
                     <div class="flex-shrink-0">
-                        <img src="/Web_personal_profile.jpg"
+                        <img src="/profile-avatar.jpg"
                             class="w-48 h-48 rounded-2xl ring-4 ring-green-500/30 object-cover object-center shadow-2xl shadow-green-500/10" />
                     </div>
 

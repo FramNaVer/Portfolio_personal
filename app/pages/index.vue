@@ -5,7 +5,7 @@
             <div class="flex items-center justify-between px-8 py-6">
                 <div class="flex items-center gap-4">
                     <div class="relative">
-                        <img src="/Web_personal_profile.jpg"
+                        <img src="/profile-avatar.jpg"
                             class="w-12 h-12 rounded-full ring-2 ring-green-500/50 hover:ring-green-400 transition-all object-cover object-center" />
                         <div
                             class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-gray-900">
@@ -71,12 +71,12 @@
         <!-- Tags Section -->
         <section class="px-8 py-12">
             <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2
-                        class="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                <h2 class="text-4xl font-extrabold text-center mb-8 text-white">
+                    <span
+                        class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
                         Programming Languages
-                    </h2>
-                </div>
+                    </span>
+                </h2>
 
                 <!-- Skills Cards -->
                 <TagCard />
@@ -85,15 +85,15 @@
 
         <section class="px-8 py-12">
             <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2
-                        class="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                <h2 class="text-4xl font-extrabold text-center mb-8 text-white">
+                    <span
+                        class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
                         Technology Stack
-                    </h2>
-                    <TagCardTech />
-                </div>
+                    </span>
+                </h2>
 
-                <!-- Skills Cards -->
+                <!-- Tech Cards -->
+                <TagCardTech />
             </div>
         </section>
 
@@ -101,13 +101,12 @@
         <section id="projects" class="px-8 py-16 bg-gray-800/30 scroll-mt-24">
             <div class="max-w-6xl mx-auto">
                 <!-- Pinned Projects -->
-                <div class="text-center mb-12">
-                    <h2
-                        class="text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-                        📌 My Projects
-                    </h2>
-                    <p class="text-gray-400 text-lg">โปรเจคที่ทำมาแล้ว 😊</p>
-                </div>
+                <h2 class="text-4xl font-extrabold text-center mb-8 text-white">
+                    <span
+                        class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent drop-shadow-lg">
+                        My Projects
+                    </span>
+                </h2>
 
                 <!-- Loading -->
                 <div v-if="loading" class="text-center py-12">
@@ -165,7 +164,8 @@
         <!-- Contact Section -->
         <section id="contact" class="px-8 py-20 scroll-mt-24">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                <h2
+                    class="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
                     Get In Touch
                 </h2>
                 <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
@@ -176,7 +176,8 @@
                     <!-- Email -->
                     <a href="mailto:framnaver@gmail.com"
                         class="group bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-green-500/50 hover:shadow-xl hover:shadow-green-500/10 transition-all duration-300">
-                        <i class="fa-solid fa-envelope text-3xl text-green-400 mb-3 group-hover:scale-110 transition-transform"></i>
+                        <i
+                            class="fa-solid fa-envelope text-3xl text-green-400 mb-3 group-hover:scale-110 transition-transform"></i>
                         <h3 class="text-white font-semibold mb-1">Email</h3>
                         <p class="text-gray-400 text-sm">framnaver@gmail.com</p>
                     </a>
@@ -184,14 +185,14 @@
                     <!-- GitHub -->
                     <a href="https://github.com/FramNaVer" target="_blank"
                         class="group bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-gray-400/50 hover:shadow-xl hover:shadow-gray-400/10 transition-all duration-300">
-                        <i class="fa-brands fa-github text-3xl text-gray-300 mb-3 group-hover:scale-110 transition-transform"></i>
+                        <i
+                            class="fa-brands fa-github text-3xl text-gray-300 mb-3 group-hover:scale-110 transition-transform"></i>
                         <h3 class="text-white font-semibold mb-1">GitHub</h3>
                         <p class="text-gray-400 text-sm">@FramNaVer</p>
                     </a>
 
                     <!-- Location -->
-                    <div
-                        class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700">
+                    <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700">
                         <i class="fa-solid fa-location-dot text-3xl text-blue-400 mb-3"></i>
                         <h3 class="text-white font-semibold mb-1">Location</h3>
                         <p class="text-gray-400 text-sm">Chiang Mai, Thailand</p>
@@ -203,9 +204,11 @@
         <!-- Footer -->
         <footer class="border-t border-gray-700/50 py-8 px-8">
             <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p class="text-gray-500 text-sm">&copy; {{ new Date().getFullYear() }} Tanadon Inmano. All rights reserved.</p>
+                <p class="text-gray-500 text-sm">&copy; {{ new Date().getFullYear() }} Tanadon Inmano. All rights
+                    reserved.</p>
                 <div class="flex items-center gap-4">
-                    <a href="https://github.com/FramNaVer" target="_blank" class="text-gray-500 hover:text-white transition-colors">
+                    <a href="https://github.com/FramNaVer" target="_blank"
+                        class="text-gray-500 hover:text-white transition-colors">
                         <i class="fa-brands fa-github text-lg"></i>
                     </a>
                     <a href="mailto:framnaver@gmail.com" class="text-gray-500 hover:text-white transition-colors">
@@ -221,13 +224,13 @@
 const { repos, pinnedRepos, languageStats, loading, error, fetchRepos } = useGitHub()
 
 const totalStars = computed(() =>
-  repos.value.reduce((sum, r) => sum + (r.stargazers_count || 0), 0)
+    repos.value.reduce((sum, r) => sum + (r.stargazers_count || 0), 0)
 )
 const totalForks = computed(() =>
-  repos.value.reduce((sum, r) => sum + (r.forks_count || 0), 0)
+    repos.value.reduce((sum, r) => sum + (r.forks_count || 0), 0)
 )
 
 onMounted(() => {
-  fetchRepos()
+    fetchRepos()
 })
 </script>
