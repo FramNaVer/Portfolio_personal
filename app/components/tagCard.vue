@@ -79,7 +79,7 @@
           <div class="absolute inset-0 bg-cyan-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </div>
         <h3 class="text-lg font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300">Golang</h3>
-        <span class="bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full text-sm font-semibold border border-cyan-500/30">Beginner</span>
+        <span class="bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full text-sm font-semibold border border-cyan-500/30">Intermediate</span>
         <div class="mt-3 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Systems Programming</div>
       </div>
     </div>
