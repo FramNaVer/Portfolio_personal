@@ -1,12 +1,11 @@
-# Portfolio ส่วนตัวของ [ชื่อของคุณ]
+# Portfolio ส่วนตัวของ [Tanadon Inmano]
 
 [![Portfolio Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://www.tanadon-i.com/en)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tanadon-inmano-3bb94929a/)
 
 นี่คือโปรเจกต์ Portfolio ส่วนตัวของผม สร้างขึ้นเพื่อรวบรวมผลงาน, บอกเล่าเกี่ยวกับประสบการณ์ และทักษะการพัฒนาซอฟต์แวร์ของผม โดยใช้ Nuxt.js เป็นเฟรมเวิร์กหลักในการพัฒนา
 
-![ภาพหน้าจอ Portfolio ของคุณ](https://via.placeholder.com/800x450.png?text=Your+Portfolio+Screenshot)
-*(อย่าลืมเปลี่ยนเป็น URL รูปภาพหน้าจอของเว็บคุณ)*
+<img width="2526" height="843" alt="image" src="https://github.com/user-attachments/assets/6a8885fc-63de-490e-9a8c-1ee23fd52981" />
 
 ---
 
