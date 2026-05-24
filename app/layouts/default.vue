@@ -15,7 +15,7 @@
                         <h1
                             class="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                             Tanadon Inmano</h1>
-                        <p class="text-xs text-gray-400">Full Stack Developer</p>
+                        <p class="text-xs font-mono text-gray-600 tracking-widest uppercase">Portfolio v1.0</p>
                     </div>
                 </NuxtLink>
 
@@ -93,19 +93,30 @@
             <slot />
         </main>
 
-        <!-- Footer -->
-        <footer class="border-t border-gray-700/50 py-8 px-8">
-            <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p class="text-gray-500 text-sm">
-                    &copy; {{ new Date().getFullYear() }} Tanadon Inmano. {{ $t('footer.rights') }}
+        <!-- System Footer -->
+        <footer class="border-t border-gray-700/50 py-5 px-8">
+            <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+                <!-- System tags -->
+                <div class="flex items-center gap-3 font-mono text-xs text-gray-700">
+                    <span class="hover:text-gray-500 transition-colors cursor-default">FULLSTACK</span>
+                    <span>•</span>
+                    <span class="hover:text-gray-500 transition-colors cursor-default">AI-NATIVE</span>
+                    <span>•</span>
+                    <span class="hover:text-gray-500 transition-colors cursor-default">DEVOPS</span>
+                </div>
+                <!-- Copyright -->
+                <p class="text-gray-700 text-xs font-mono order-last sm:order-none">
+                    &copy; {{ new Date().getFullYear() }} TANADON INMANO
                 </p>
+                <!-- Version + Social links -->
                 <div class="flex items-center gap-4">
+                    <span class="text-gray-700 text-xs font-mono">VERSION 1.0</span>
                     <a href="https://github.com/FramNaVer" target="_blank"
-                        class="text-gray-500 hover:text-white transition-colors">
-                        <i class="fa-brands fa-github text-lg"></i>
+                        class="text-gray-600 hover:text-white transition-colors">
+                        <i class="fa-brands fa-github text-base"></i>
                     </a>
-                    <a href="mailto:framnaver@gmail.com" class="text-gray-500 hover:text-white transition-colors">
-                        <i class="fa-solid fa-envelope text-lg"></i>
+                    <a href="mailto:framnaver@gmail.com" class="text-gray-600 hover:text-white transition-colors">
+                        <i class="fa-solid fa-envelope text-base"></i>
                     </a>
                 </div>
             </div>

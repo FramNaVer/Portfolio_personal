@@ -1,27 +1,11 @@
 <template>
     <div>
-        <!-- Hero Section -->
-        <section class="px-8 py-16 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h1
-                    class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                    {{ $t('hero.title') }}
-                </h1>
-                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                    {{ $t('hero.description') }}
-                </p>
-                <div class="flex justify-center gap-4">
-                    <a href="https://github.com/FramNaVer" target="_blank"
-                        class="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                        {{ $t('hero.viewWork') }}
-                    </a>
-                    <a href="mailto:framnaver@gmail.com"
-                        class="border border-gray-600 hover:border-green-500 px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-green-500/10">
-                        {{ $t('hero.contactMe') }}
-                    </a>
-                </div>
-            </div>
-        </section>
+        <!-- Operator Header -->
+        <OperatorHeader
+            :repo-count="repos.length"
+            :lang-count="languageStats.length"
+            :total-stars="totalStars"
+        />
 
         <!-- Tags Section -->
         <section class="px-8 py-12">
@@ -87,30 +71,6 @@
             </div>
         </section>
 
-        <!-- Stats Section -->
-        <section class="px-8 py-16 bg-gray-800/30">
-            <div class="max-w-4xl mx-auto">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                    <div class="p-6">
-                        <div class="text-4xl font-bold text-green-400 mb-2">{{ repos.length || '—' }}</div>
-                        <div class="text-gray-400">{{ $t('github.publicRepos') }}</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-4xl font-bold text-blue-400 mb-2">{{ totalStars }}</div>
-                        <div class="text-gray-400">{{ $t('github.totalStars') }}</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-4xl font-bold text-purple-400 mb-2">{{ languageStats.length }}</div>
-                        <div class="text-gray-400">{{ $t('github.languages') }}</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-4xl font-bold text-yellow-400 mb-2">{{ totalForks }}</div>
-                        <div class="text-gray-400">{{ $t('github.totalForks') }}</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Contact Section -->
         <section id="contact" class="px-8 py-20 scroll-mt-24">
             <div class="max-w-4xl mx-auto text-center">
@@ -167,9 +127,6 @@ const { repos, pinnedRepos, languageStats, loading, error, fetchRepos } = useGit
 
 const totalStars = computed(() =>
     repos.value.reduce((sum, r) => sum + (r.stargazers_count || 0), 0)
-)
-const totalForks = computed(() =>
-    repos.value.reduce((sum, r) => sum + (r.forks_count || 0), 0)
 )
 
 onMounted(() => {
