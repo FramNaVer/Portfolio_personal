@@ -44,11 +44,6 @@
               :class="{ 'bg-yellow-400': $route.path === localePath('/projects') }"></div>
             {{ $t('nav.projects') }}
           </NuxtLink>
-          <a :href="localePath('/') + '#contact'"
-            class="flex items-center gap-2.5 px-3 py-2 text-sm font-mono text-gray-500 hover:text-white hover:bg-gray-800/50 transition-all duration-200 group">
-            <div class="w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-blue-400 transition-colors"></div>
-            {{ $t('nav.contact') }}
-          </a>
         </div>
       </nav>
 
@@ -123,12 +118,6 @@
             <div class="w-2 h-2 rounded-full bg-gray-600"></div>
             {{ $t('nav.projects') }}
           </NuxtLink>
-          <a :href="localePath('/') + '#contact'" @click="mobileMenuOpen = false"
-            class="flex items-center gap-3 px-4 py-3 font-mono text-sm text-gray-300 hover:text-white border border-gray-700/50 hover:border-blue-500/30 transition-all">
-            <div class="w-2 h-2 rounded-full bg-gray-600"></div>
-            {{ $t('nav.contact') }}
-          </a>
-
           <div class="flex gap-2 mt-4">
             <button v-for="loc in availableLocales" :key="loc.code"
               @click="switchLocale(loc.code); mobileMenuOpen = false"
@@ -175,7 +164,6 @@
 <script setup>
 const { locale, locales, setLocale } = useI18n()
 const localePath = useLocalePath()
-const route = useRoute()
 
 const mobileMenuOpen = ref(false)
 
