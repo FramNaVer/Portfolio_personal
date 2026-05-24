@@ -19,9 +19,16 @@
                         <p class="text-lg text-gray-300 leading-relaxed mb-4">
                             {{ $t('about.bio1', { name: 'ธนดล อิ่นมะโน (Tanadon Inmano)' }) }}
                         </p>
-                        <p class="text-gray-400 leading-relaxed mb-6">
+                        <p class="text-gray-400 leading-relaxed mb-4">
                             {{ $t('about.bio2') }}
                         </p>
+                        <!-- Current job badge -->
+                        <div class="flex items-center gap-2 mb-6 text-sm font-mono">
+                            <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                            <span class="text-green-400 font-semibold">Software Developer</span>
+                            <span class="text-gray-600">@</span>
+                            <span class="text-gray-300">Muang Thai Capital (MTC)</span>
+                        </div>
                         <a href="/resume.pdf" download
                             class="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg">
                             <i class="fa-solid fa-download"></i>

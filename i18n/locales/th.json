@@ -37,13 +37,13 @@
   },
   "about": {
     "title": "เกี่ยวกับผม",
-    "bio1": "สวัสดีครับ ผม {name} นักศึกษาชั้นปีที่ 4 สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้",
-    "bio2": "ผมหลงใหลในงานพัฒนาเว็บไซต์แบบ Full Stack และการเทรนโมเดล AI ชอบเรียนรู้เทคโนโลยีใหม่ๆ และนำมาประยุกต์ใช้ในโปรเจคจริง",
+    "bio1": "สวัสดีครับ ผม {name} บัณฑิตสาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้",
+    "bio2": "ปัจจุบันทำงานเป็น Software Developer ที่เมืองไทยแคปปิตอล (MTC) หลงใหลในงาน Full Stack Web Development และ AI/ML ชอบสร้างระบบที่ทำงานได้จริงใน production",
     "downloadResume": "ดาวน์โหลด Resume",
     "education": "การศึกษา",
     "university": "มหาวิทยาลัยแม่โจ้",
     "major": "สาขาวิทยาการคอมพิวเตอร์",
-    "year": "นักศึกษาชั้นปีที่ 4",
+    "year": "บัณฑิต — รุ่นปี 2568",
     "whatIDo": "สิ่งที่ผมทำ",
     "fullstack": "Full Stack Development",
     "fullstackDesc": "พัฒนาเว็บแอปพลิเคชันตั้งแต่ Frontend ไปจนถึง Backend ด้วย Vue.js, Nuxt, ASP.NET และ Express.js",
@@ -63,10 +63,14 @@
     "active": "พร้อมทำงาน",
     "commandMode": "โหมดการทำงาน",
     "summary": "สรุปข้อมูล",
-    "summaryText": "นักศึกษาชั้นปีที่ 4 สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้ หลงใหลในการพัฒนาเว็บแอปพลิเคชันและ AI/ML ชอบสร้างระบบที่ทำงานได้จริง",
+    "summaryText": "บัณฑิตสาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้ ปัจจุบันทำงานเป็น Software Developer ที่เมืองไทยแคปปิตอล (MTC) หลงใหลในการพัฒนาเว็บแอปพลิเคชันและ AI/ML",
     "coreCapabilities": "ความสามารถหลัก",
     "education": "ม.แม่โจ้",
-    "capabilities": ["Web Development", "REST API", "Machine Learning", "Database Design", "UI/UX Figma", "Docker", "Git"]
+    "capabilities": ["Web Development", "REST API", "Machine Learning", "Database Design", "UI/UX Figma", "Docker", "Git"],
+    "experienceTimeline": "ประสบการณ์",
+    "current": "ปัจจุบัน",
+    "intern": "ฝึกงาน",
+    "graduate": "บัณฑิต"
   },
   "seo": {
     "homeTitle": "Tanadon Inmano | Portfolio",

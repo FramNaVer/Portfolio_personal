@@ -7,30 +7,48 @@
             :total-stars="totalStars"
         />
 
-        <!-- Tags Section -->
-        <section class="px-8 py-12">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-extrabold text-center mb-8 text-white">
-                    <span
-                        class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
-                        {{ $t('sections.programmingLanguages') }}
-                    </span>
-                </h2>
-                <TagCard />
-            </div>
-        </section>
+        <!-- Experience Timeline -->
+        <ExperienceTimeline />
 
-        <section class="px-8 py-12">
+        <!-- Programming Languages Panel -->
+        <div class="px-4 sm:px-8 pb-4">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-extrabold text-center mb-8 text-white">
-                    <span
-                        class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
-                        {{ $t('sections.technologyStack') }}
-                    </span>
-                </h2>
-                <TagCardTech />
+                <div class="border border-gray-700/60 bg-gray-900/20 overflow-hidden">
+                    <div class="flex items-center justify-between px-5 sm:px-6 py-3 border-b border-gray-700/50 bg-gray-800/20">
+                        <div class="flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+                            <span class="text-xs font-mono text-gray-400 tracking-widest uppercase">
+                                {{ $t('sections.programmingLanguages') }}
+                            </span>
+                        </div>
+                        <span class="text-xs font-mono text-gray-600 border border-gray-700/50 bg-gray-800/60 px-2 py-0.5">CORE SKILLS</span>
+                    </div>
+                    <div class="p-6 sm:p-8">
+                        <TagCard />
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+
+        <!-- Technology Stack Panel -->
+        <div class="px-4 sm:px-8 pb-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="border border-gray-700/60 bg-gray-900/20 overflow-hidden">
+                    <div class="flex items-center justify-between px-5 sm:px-6 py-3 border-b border-gray-700/50 bg-gray-800/20">
+                        <div class="flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-purple-400"></div>
+                            <span class="text-xs font-mono text-gray-400 tracking-widest uppercase">
+                                {{ $t('sections.technologyStack') }}
+                            </span>
+                        </div>
+                        <span class="text-xs font-mono text-gray-600 border border-gray-700/50 bg-gray-800/60 px-2 py-0.5">CORE TOOLS</span>
+                    </div>
+                    <div class="p-6 sm:p-8">
+                        <TagCardTech />
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- GitHub Projects Section -->
         <section id="projects" class="px-8 py-16 bg-gray-800/30 scroll-mt-24">
