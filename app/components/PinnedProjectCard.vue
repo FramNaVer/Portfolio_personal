@@ -1,54 +1,47 @@
 <template>
   <div
-    class="group relative bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-yellow-500/50 dark:hover:border-yellow-500/50 hover:shadow-xl hover:shadow-yellow-500/10 transition-all duration-500 overflow-hidden flex flex-col"
+    class="group flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-4 px-5 sm:px-6 py-4 hover:bg-slate-50/80 dark:hover:bg-gray-800/20 transition-colors duration-150 border-b border-slate-200/50 dark:border-gray-700/30 last:border-0"
   >
-    <!-- Glow overlay -->
-    <div
-      class="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-    ></div>
-
-    <div class="relative z-10 p-6 flex flex-col flex-1">
-      <!-- Header -->
-      <div class="flex items-start justify-between mb-3">
-        <div class="flex items-center gap-2 text-slate-500 dark:text-gray-400">
-          <i class="fa-solid fa-book-bookmark text-lg"></i>
-          <a
-            :href="repo.html_url"
-            target="_blank"
-            class="text-lg font-bold text-blue-600 dark:text-blue-400 hover:underline truncate"
-          >
-            {{ repo.name }}
-          </a>
-        </div>
-        <span
-          v-if="repo.stargazers_count"
-          class="flex items-center gap-1 text-yellow-500 dark:text-yellow-400 text-sm"
+    <!-- Left: dot + name + description -->
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full flex-shrink-0" :style="{ backgroundColor: langColor }"></span>
+        <a
+          :href="repo.html_url"
+          target="_blank"
+          class="font-mono text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline truncate"
         >
-          <i class="fa-solid fa-star"></i> {{ repo.stargazers_count }}
+          {{ repo.name }}
+        </a>
+        <span v-if="repo.fork"
+          class="px-1 py-0.5 text-xs font-mono border border-slate-200/80 dark:border-gray-700/50 text-slate-400 dark:text-gray-600 leading-none">
+          FORK
         </span>
       </div>
-
-      <!-- Description -->
-      <p class="text-slate-500 dark:text-gray-400 text-sm mb-4 line-clamp-2 flex-1">
-        {{ repo.description || 'No description provided.' }}
+      <p class="text-xs text-slate-400 dark:text-gray-600 font-mono truncate mt-0.5 pl-4">
+        {{ repo.description || '—' }}
       </p>
+    </div>
 
-      <!-- Footer -->
-      <div class="flex items-center justify-between text-xs text-slate-400 dark:text-gray-500 mt-auto">
-        <span v-if="repo.language" class="flex items-center gap-1.5">
-          <span
-            class="w-3 h-3 rounded-full"
-            :style="{ backgroundColor: langColor }"
-          ></span>
-          {{ repo.language }}
-        </span>
-        <span v-if="repo.forks_count" class="flex items-center gap-1">
-          <i class="fa-solid fa-code-fork"></i> {{ repo.forks_count }}
-        </span>
-        <span class="text-slate-300 dark:text-gray-600">
-          {{ timeAgo(repo.updated_at) }}
-        </span>
-      </div>
+    <!-- Right: language + stars + forks + time -->
+    <div class="flex items-center gap-3 pl-4 sm:pl-0 flex-shrink-0">
+      <span v-if="repo.language"
+        class="px-1.5 py-0.5 text-xs font-mono border border-slate-200/80 dark:border-gray-700/50 text-slate-500 dark:text-gray-500 bg-slate-50/80 dark:bg-gray-800/60">
+        {{ repo.language }}
+      </span>
+      <span v-if="repo.stargazers_count"
+        class="flex items-center gap-1 text-xs font-mono text-yellow-500 dark:text-yellow-400">
+        <i class="fa-solid fa-star text-xs"></i>{{ repo.stargazers_count }}
+      </span>
+      <span v-if="repo.forks_count"
+        class="flex items-center gap-1 text-xs font-mono text-slate-400 dark:text-gray-600">
+        <i class="fa-solid fa-code-fork text-xs"></i>{{ repo.forks_count }}
+      </span>
+      <span class="text-xs font-mono text-slate-300 dark:text-gray-700 tabular-nums">{{ timeAgo(repo.updated_at) }}</span>
+      <a :href="repo.html_url" target="_blank"
+        class="text-slate-300 hover:text-blue-500 dark:text-gray-700 dark:hover:text-blue-400 transition-colors opacity-0 group-hover:opacity-100">
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+      </a>
     </div>
   </div>
 </template>
@@ -88,9 +81,3 @@ function timeAgo(dateStr) {
   return `${Math.floor(months / 12)}y ago`
 }
 </script>
-
-<style scoped>
-.group:hover {
-  transform: translateY(-6px);
-}
-</style>

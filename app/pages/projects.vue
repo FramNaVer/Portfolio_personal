@@ -25,7 +25,7 @@
         </div>
 
         <!-- Stats row -->
-        <div class="grid grid-cols-3 divide-x divide-slate-200/80 dark:divide-gray-700/50 border-b border-slate-200/80 dark:border-gray-700/50">
+        <div class="grid grid-cols-3 divide-x divide-slate-200/80 dark:divide-gray-700/50">
           <div class="px-5 py-3 text-center">
             <div class="text-xl font-bold text-green-500 dark:text-green-400 font-mono">{{ repos.length || '—' }}</div>
             <div class="text-xs font-mono text-slate-400 dark:text-gray-600 uppercase tracking-wider mt-0.5">{{ $t('github.publicRepos') }}</div>
@@ -48,7 +48,7 @@
       </div>
 
       <!-- Error -->
-      <div v-else-if="error && pinnedRepos.length === 0"
+      <div v-else-if="error && repos.length === 0"
         class="border border-slate-200/80 bg-white/60 dark:border-gray-700/60 dark:bg-gray-900/20 px-6 py-12 text-center">
         <i class="fa-solid fa-triangle-exclamation text-2xl text-yellow-400 mb-3"></i>
         <p class="text-slate-500 dark:text-gray-500 text-sm font-mono mb-4">{{ error }}</p>
@@ -58,20 +58,35 @@
         </button>
       </div>
 
-      <!-- Projects Grid Panel -->
+      <!-- Repository List -->
       <div v-else class="border border-slate-200/80 bg-white/60 dark:border-gray-700/60 dark:bg-gray-900/20 overflow-hidden">
+
+        <!-- Panel header -->
         <div class="flex items-center justify-between px-5 sm:px-6 py-3 border-b border-slate-200/80 bg-slate-50/60 dark:border-gray-700/50 dark:bg-gray-800/20">
           <div class="flex items-center gap-2">
             <div class="w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-gray-500"></div>
-            <span class="text-xs font-mono text-slate-500 dark:text-gray-500 tracking-widest uppercase">Pinned Repositories</span>
+            <span class="text-xs font-mono text-slate-500 dark:text-gray-500 tracking-widest uppercase">Repositories</span>
           </div>
-          <span class="text-xs font-mono text-slate-400 dark:text-gray-600 border border-slate-200/80 dark:border-gray-700/50 bg-slate-100/60 dark:bg-gray-800/60 px-2 py-0.5">
-            {{ pinnedRepos.length }} REPOS
-          </span>
+          <div class="flex items-center gap-3">
+            <!-- Column labels (desktop only) -->
+            <div class="hidden sm:flex items-center gap-6 text-xs font-mono text-slate-300 dark:text-gray-700 tracking-wider uppercase mr-2">
+              <span class="w-16 text-center">Lang</span>
+              <span class="w-6 text-center">★</span>
+              <span class="w-6 text-center">⑂</span>
+              <span class="w-14 text-right">Updated</span>
+              <span class="w-4"></span>
+            </div>
+            <span class="text-xs font-mono text-slate-400 dark:text-gray-600 border border-slate-200/80 dark:border-gray-700/50 bg-slate-100/60 dark:bg-gray-800/60 px-2 py-0.5">
+              {{ repos.length }} FILES
+            </span>
+          </div>
         </div>
-        <div class="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <PinnedProjectCard v-for="repo in pinnedRepos" :key="repo.id" :repo="repo" />
+
+        <!-- Rows -->
+        <div>
+          <PinnedProjectCard v-for="repo in repos" :key="repo.id" :repo="repo" />
         </div>
+
       </div>
 
       <!-- Language Usage Panel -->
@@ -101,7 +116,7 @@ useHead({
   ]
 })
 
-const { repos, pinnedRepos, languageStats, loading, error, fetchRepos } = useGitHub()
+const { repos, languageStats, loading, error, fetchRepos } = useGitHub()
 
 const totalStars = computed(() =>
   repos.value.reduce((sum, r) => sum + (r.stargazers_count || 0), 0)
