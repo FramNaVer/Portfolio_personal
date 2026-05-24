@@ -1,6 +1,6 @@
 <template>
   <div
-    class="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl border border-slate-700 hover:border-yellow-500/50 hover:shadow-xl hover:shadow-yellow-500/10 transition-all duration-500 overflow-hidden flex flex-col"
+    class="group relative bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-yellow-500/50 dark:hover:border-yellow-500/50 hover:shadow-xl hover:shadow-yellow-500/10 transition-all duration-500 overflow-hidden flex flex-col"
   >
     <!-- Glow overlay -->
     <div
@@ -10,31 +10,31 @@
     <div class="relative z-10 p-6 flex flex-col flex-1">
       <!-- Header -->
       <div class="flex items-start justify-between mb-3">
-        <div class="flex items-center gap-2 text-gray-400">
+        <div class="flex items-center gap-2 text-slate-500 dark:text-gray-400">
           <i class="fa-solid fa-book-bookmark text-lg"></i>
           <a
             :href="repo.html_url"
             target="_blank"
-            class="text-lg font-bold text-blue-400 hover:underline truncate"
+            class="text-lg font-bold text-blue-600 dark:text-blue-400 hover:underline truncate"
           >
             {{ repo.name }}
           </a>
         </div>
         <span
           v-if="repo.stargazers_count"
-          class="flex items-center gap-1 text-yellow-400 text-sm"
+          class="flex items-center gap-1 text-yellow-500 dark:text-yellow-400 text-sm"
         >
           <i class="fa-solid fa-star"></i> {{ repo.stargazers_count }}
         </span>
       </div>
 
       <!-- Description -->
-      <p class="text-gray-400 text-sm mb-4 line-clamp-2 flex-1">
+      <p class="text-slate-500 dark:text-gray-400 text-sm mb-4 line-clamp-2 flex-1">
         {{ repo.description || 'No description provided.' }}
       </p>
 
       <!-- Footer -->
-      <div class="flex items-center justify-between text-xs text-gray-500 mt-auto">
+      <div class="flex items-center justify-between text-xs text-slate-400 dark:text-gray-500 mt-auto">
         <span v-if="repo.language" class="flex items-center gap-1.5">
           <span
             class="w-3 h-3 rounded-full"
@@ -45,7 +45,7 @@
         <span v-if="repo.forks_count" class="flex items-center gap-1">
           <i class="fa-solid fa-code-fork"></i> {{ repo.forks_count }}
         </span>
-        <span class="text-gray-600">
+        <span class="text-slate-300 dark:text-gray-600">
           {{ timeAgo(repo.updated_at) }}
         </span>
       </div>
