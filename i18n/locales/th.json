@@ -57,6 +57,17 @@
     "ctaDesc": "ผมพร้อมเรียนรู้และร่วมสร้างสรรค์ผลงานใหม่ๆ เสมอ",
     "viewProjects": "ดูโปรเจค"
   },
+  "operator": {
+    "developerId": "รหัสนักพัฒนา",
+    "systemStatus": "สถานะระบบ",
+    "active": "พร้อมทำงาน",
+    "commandMode": "โหมดการทำงาน",
+    "summary": "สรุปข้อมูล",
+    "summaryText": "นักศึกษาชั้นปีที่ 4 สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้ หลงใหลในการพัฒนาเว็บแอปพลิเคชันและ AI/ML ชอบสร้างระบบที่ทำงานได้จริง",
+    "coreCapabilities": "ความสามารถหลัก",
+    "education": "ม.แม่โจ้",
+    "capabilities": ["Web Development", "REST API", "Machine Learning", "Database Design", "UI/UX Figma", "Docker", "Git"]
+  },
   "seo": {
     "homeTitle": "Tanadon Inmano | Portfolio",
     "homeDescription": "Portfolio ของ ธนดล อิ่นมะโน - Full Stack Developer & AI Enthusiast",

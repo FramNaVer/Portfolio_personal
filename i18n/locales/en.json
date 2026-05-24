@@ -57,6 +57,17 @@
     "ctaDesc": "I'm always ready to learn and create amazing things.",
     "viewProjects": "View Projects"
   },
+  "operator": {
+    "developerId": "Developer ID",
+    "systemStatus": "System Status",
+    "active": "Active",
+    "commandMode": "Command Mode",
+    "summary": "Developer Summary",
+    "summaryText": "4th-year Computer Science student at Maejo University. Passionate about building scalable web applications and exploring AI/ML. Love turning ideas into working systems.",
+    "coreCapabilities": "Core Capabilities",
+    "education": "Maejo Univ.",
+    "capabilities": ["Web Development", "REST API", "Machine Learning", "Database Design", "UI/UX Figma", "Docker", "Git"]
+  },
   "seo": {
     "homeTitle": "Tanadon Inmano | Portfolio",
     "homeDescription": "Portfolio of Tanadon Inmano - Full Stack Developer & AI Enthusiast",
