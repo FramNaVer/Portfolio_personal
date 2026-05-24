@@ -50,84 +50,108 @@
             </div>
         </div>
 
-        <!-- GitHub Projects Section -->
-        <section id="projects" class="px-8 py-16 bg-gray-800/30 scroll-mt-24">
+        <!-- GitHub Projects Panel -->
+        <div id="projects" class="px-4 sm:px-8 pb-4 scroll-mt-4">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-extrabold text-center mb-8 text-white">
-                    <span
-                        class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent drop-shadow-lg">
-                        {{ $t('sections.myProjects') }}
-                    </span>
-                </h2>
-
-                <!-- Loading -->
-                <div v-if="loading" class="text-center py-12">
-                    <i class="fa-solid fa-spinner fa-spin text-3xl text-green-400 mb-4"></i>
-                    <p class="text-gray-400">{{ $t('github.loading') }}</p>
-                </div>
-
-                <!-- Error -->
-                <div v-else-if="error && pinnedRepos.length === 0" class="text-center py-12">
-                    <i class="fa-solid fa-triangle-exclamation text-3xl text-yellow-400 mb-4"></i>
-                    <p class="text-gray-400 mb-4">{{ error }}</p>
-                    <button @click="fetchRepos"
-                        class="bg-green-500/20 hover:bg-green-500/30 text-green-400 px-6 py-2 rounded-full transition-colors">
-                        {{ $t('github.retry') }}
-                    </button>
-                </div>
-
-                <!-- Pinned Project Cards -->
-                <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <PinnedProjectCard v-for="repo in pinnedRepos" :key="repo.id" :repo="repo" />
-                </div>
-
-                <!-- Language Stats -->
-                <div v-if="languageStats.length" class="mt-16 max-w-2xl mx-auto">
-                    <h3 class="text-2xl font-bold text-center mb-8 text-gray-200">{{ $t('sections.languageUsage') }}</h3>
-                    <LanguageStats :stats="languageStats" />
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="px-8 py-20 scroll-mt-24">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2
-                    class="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-                    {{ $t('contact.title') }}
-                </h2>
-                <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
-                    {{ $t('contact.description') }}
-                </p>
-
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
-                    <!-- Email -->
-                    <a href="mailto:framnaver@gmail.com"
-                        class="group bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-green-500/50 hover:shadow-xl hover:shadow-green-500/10 transition-all duration-300">
-                        <i
-                            class="fa-solid fa-envelope text-3xl text-green-400 mb-3 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="text-white font-semibold mb-1">{{ $t('contact.email') }}</h3>
-                        <p class="text-gray-400 text-sm">framnaver@gmail.com</p>
-                    </a>
-
-                    <!-- GitHub -->
-                    <a href="https://github.com/FramNaVer" target="_blank"
-                        class="group bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-gray-400/50 hover:shadow-xl hover:shadow-gray-400/10 transition-all duration-300">
-                        <i
-                            class="fa-brands fa-github text-3xl text-gray-300 mb-3 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="text-white font-semibold mb-1">GitHub</h3>
-                        <p class="text-gray-400 text-sm">@FramNaVer</p>
-                    </a>
-
-                    <!-- Location -->
-                    <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700">
-                        <i class="fa-solid fa-location-dot text-3xl text-blue-400 mb-3"></i>
-                        <h3 class="text-white font-semibold mb-1">{{ $t('contact.location') }}</h3>
-                        <p class="text-gray-400 text-sm">{{ $t('contact.locationValue') }}</p>
+                <div class="border border-gray-700/60 bg-gray-900/20 overflow-hidden">
+                    <div class="flex items-center justify-between px-5 sm:px-6 py-3 border-b border-gray-700/50 bg-gray-800/20">
+                        <div class="flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-yellow-400"></div>
+                            <span class="text-xs font-mono text-gray-400 tracking-widest uppercase">
+                                {{ $t('sections.myProjects') }}
+                            </span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span v-if="loading" class="text-xs font-mono text-gray-600 flex items-center gap-1.5">
+                                <i class="fa-solid fa-spinner fa-spin text-green-400"></i> {{ $t('github.loading') }}
+                            </span>
+                            <span v-else class="text-xs font-mono text-gray-600 border border-gray-700/50 bg-gray-800/60 px-2 py-0.5">
+                                {{ pinnedRepos.length }} REPOS
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <!-- Error state -->
+                        <div v-if="error && pinnedRepos.length === 0" class="text-center py-8">
+                            <i class="fa-solid fa-triangle-exclamation text-2xl text-yellow-400 mb-3"></i>
+                            <p class="text-gray-500 text-sm mb-3 font-mono">{{ error }}</p>
+                            <button @click="fetchRepos"
+                                class="text-xs font-mono border border-green-500/40 text-green-400 px-4 py-1.5 hover:bg-green-500/10 transition-colors">
+                                {{ $t('github.retry') }}
+                            </button>
+                        </div>
+                        <!-- Project Cards -->
+                        <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <PinnedProjectCard v-for="repo in pinnedRepos" :key="repo.id" :repo="repo" />
+                        </div>
+                        <!-- Language Stats -->
+                        <div v-if="languageStats.length" class="mt-8 border-t border-gray-700/30 pt-6">
+                            <div class="flex items-center gap-2 mb-4">
+                                <div class="w-1.5 h-1.5 rounded-full bg-gray-500"></div>
+                                <span class="text-xs font-mono text-gray-500 tracking-widest uppercase">{{ $t('sections.languageUsage') }}</span>
+                            </div>
+                            <div class="max-w-xl">
+                                <LanguageStats :stats="languageStats" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- Contact & Digital Presence Panel -->
+        <div id="contact" class="px-4 sm:px-8 pb-8 scroll-mt-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="border border-gray-700/60 bg-gray-900/20 overflow-hidden">
+                    <div class="flex items-center justify-between px-5 sm:px-6 py-3 border-b border-gray-700/50 bg-gray-800/20">
+                        <div class="flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-green-400"></div>
+                            <span class="text-xs font-mono text-gray-400 tracking-widest uppercase">
+                                {{ $t('contact.title') }}
+                            </span>
+                        </div>
+                        <span class="text-xs font-mono text-gray-600 border border-gray-700/50 bg-gray-800/60 px-2 py-0.5">DIGITAL PRESENCE</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-700/40">
+                        <!-- Email -->
+                        <a href="mailto:framnaver@gmail.com"
+                            class="group flex items-center gap-4 px-6 py-5 hover:bg-gray-800/20 transition-colors duration-200">
+                            <div class="w-9 h-9 border border-green-500/30 bg-green-500/5 flex items-center justify-center flex-shrink-0 group-hover:border-green-500/60 transition-colors">
+                                <i class="fa-solid fa-envelope text-green-400 text-sm"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <p class="text-xs font-mono text-gray-500 uppercase tracking-wider mb-0.5">{{ $t('contact.email') }}</p>
+                                <p class="text-white text-sm font-mono truncate group-hover:text-green-300 transition-colors">framnaver@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/FramNaVer" target="_blank"
+                            class="group flex items-center gap-4 px-6 py-5 hover:bg-gray-800/20 transition-colors duration-200">
+                            <div class="w-9 h-9 border border-gray-600/30 bg-gray-600/5 flex items-center justify-center flex-shrink-0 group-hover:border-gray-400/60 transition-colors">
+                                <i class="fa-brands fa-github text-gray-300 text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-mono text-gray-500 uppercase tracking-wider mb-0.5">GitHub</p>
+                                <p class="text-white text-sm font-mono group-hover:text-gray-200 transition-colors">@FramNaVer</p>
+                            </div>
+                        </a>
+
+                        <!-- Location -->
+                        <div class="flex items-center gap-4 px-6 py-5">
+                            <div class="w-9 h-9 border border-blue-500/30 bg-blue-500/5 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot text-blue-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-mono text-gray-500 uppercase tracking-wider mb-0.5">{{ $t('contact.location') }}</p>
+                                <p class="text-white text-sm font-mono">{{ $t('contact.locationValue') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
