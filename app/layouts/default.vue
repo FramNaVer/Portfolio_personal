@@ -37,11 +37,13 @@
               :class="{ 'bg-green-400': $route.path === localePath('/about') }"></div>
             {{ $t('nav.about') }}
           </NuxtLink>
-          <a :href="localePath('/') + '#projects'"
-            class="flex items-center gap-2.5 px-3 py-2 text-sm font-mono text-gray-500 hover:text-white hover:bg-gray-800/50 transition-all duration-200 group">
-            <div class="w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-purple-400 transition-colors"></div>
+          <NuxtLink :to="localePath('/projects')"
+            class="flex items-center gap-2.5 px-3 py-2 text-sm font-mono text-gray-500 hover:text-white hover:bg-gray-800/50 transition-all duration-200 group"
+            :class="{ 'text-yellow-400 bg-gray-800/40': $route.path === localePath('/projects') }">
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-yellow-400 transition-colors"
+              :class="{ 'bg-yellow-400': $route.path === localePath('/projects') }"></div>
             {{ $t('nav.projects') }}
-          </a>
+          </NuxtLink>
           <a :href="localePath('/') + '#contact'"
             class="flex items-center gap-2.5 px-3 py-2 text-sm font-mono text-gray-500 hover:text-white hover:bg-gray-800/50 transition-all duration-200 group">
             <div class="w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-blue-400 transition-colors"></div>
@@ -116,11 +118,11 @@
             <div class="w-2 h-2 rounded-full bg-gray-600"></div>
             {{ $t('nav.about') }}
           </NuxtLink>
-          <a :href="localePath('/') + '#projects'" @click="mobileMenuOpen = false"
-            class="flex items-center gap-3 px-4 py-3 font-mono text-sm text-gray-300 hover:text-white border border-gray-700/50 hover:border-purple-500/30 transition-all">
+          <NuxtLink :to="localePath('/projects')" @click="mobileMenuOpen = false"
+            class="flex items-center gap-3 px-4 py-3 font-mono text-sm text-gray-300 hover:text-white border border-gray-700/50 hover:border-yellow-500/30 transition-all">
             <div class="w-2 h-2 rounded-full bg-gray-600"></div>
             {{ $t('nav.projects') }}
-          </a>
+          </NuxtLink>
           <a :href="localePath('/') + '#contact'" @click="mobileMenuOpen = false"
             class="flex items-center gap-3 px-4 py-3 font-mono text-sm text-gray-300 hover:text-white border border-gray-700/50 hover:border-blue-500/30 transition-all">
             <div class="w-2 h-2 rounded-full bg-gray-600"></div>

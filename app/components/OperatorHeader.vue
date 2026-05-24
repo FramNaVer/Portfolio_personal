@@ -37,7 +37,7 @@
               <span class="text-gray-600">•</span>
               <span class="text-gray-300">AI/ML Enthusiast</span>
               <span class="text-gray-600">•</span>
-              <span class="text-gray-300">CS Student</span>
+              <span class="text-gray-300">Software Developer @ MTC</span>
             </div>
 
             <div class="flex items-center gap-2 mb-8 text-gray-500 text-xs font-mono">
@@ -122,6 +122,36 @@
           </div>
         </div>
 
+        <!-- Skills Section -->
+        <div class="border-t border-gray-700/50 grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-gray-700/50">
+          <!-- Programming Languages -->
+          <div class="px-5 sm:px-6 py-4">
+            <div class="flex items-center gap-2 mb-3">
+              <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+              <span class="text-xs font-mono text-gray-600 tracking-widest uppercase">{{ $t('sections.programmingLanguages') }}</span>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              <span v-for="lang in languages" :key="lang"
+                class="px-2 py-0.5 text-xs font-mono text-gray-400 bg-gray-800/60 border border-gray-700/40 hover:border-blue-500/30 hover:text-gray-200 transition-colors cursor-default">
+                {{ lang }}
+              </span>
+            </div>
+          </div>
+          <!-- Tools & Stack -->
+          <div class="px-5 sm:px-6 py-4">
+            <div class="flex items-center gap-2 mb-3">
+              <div class="w-1.5 h-1.5 rounded-full bg-purple-400"></div>
+              <span class="text-xs font-mono text-gray-600 tracking-widest uppercase">{{ $t('sections.technologyStack') }}</span>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              <span v-for="tool in tools" :key="tool"
+                class="px-2 py-0.5 text-xs font-mono text-gray-400 bg-gray-800/60 border border-gray-700/40 hover:border-purple-500/30 hover:text-gray-200 transition-colors cursor-default">
+                {{ tool }}
+              </span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -139,4 +169,14 @@ defineProps<{
 const capabilities = computed(() =>
   (tm('operator.capabilities') as any[]).map((fn: any) => rt(fn))
 )
+
+const languages = [
+  'Vue.js', 'Nuxt.js', 'Python', 'C#', 'ASP.NET', 'Golang',
+  'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Express.js', 'React', 'Tailwind CSS'
+]
+
+const tools = [
+  'Docker', 'Git', 'GitHub', 'Postman', 'VS Code', 'Visual Studio',
+  'Figma', 'MySQL', 'MongoDB', 'Swagger', 'Trello'
+]
 </script>

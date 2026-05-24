@@ -10,46 +10,6 @@
         <!-- Experience Timeline -->
         <ExperienceTimeline />
 
-        <!-- Programming Languages Panel -->
-        <div class="px-4 sm:px-8 pb-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="border border-gray-700/60 bg-gray-900/20 overflow-hidden">
-                    <div class="flex items-center justify-between px-5 sm:px-6 py-3 border-b border-gray-700/50 bg-gray-800/20">
-                        <div class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
-                            <span class="text-xs font-mono text-gray-400 tracking-widest uppercase">
-                                {{ $t('sections.programmingLanguages') }}
-                            </span>
-                        </div>
-                        <span class="text-xs font-mono text-gray-600 border border-gray-700/50 bg-gray-800/60 px-2 py-0.5">CORE SKILLS</span>
-                    </div>
-                    <div class="p-6 sm:p-8">
-                        <TagCard />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Technology Stack Panel -->
-        <div class="px-4 sm:px-8 pb-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="border border-gray-700/60 bg-gray-900/20 overflow-hidden">
-                    <div class="flex items-center justify-between px-5 sm:px-6 py-3 border-b border-gray-700/50 bg-gray-800/20">
-                        <div class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 rounded-full bg-purple-400"></div>
-                            <span class="text-xs font-mono text-gray-400 tracking-widest uppercase">
-                                {{ $t('sections.technologyStack') }}
-                            </span>
-                        </div>
-                        <span class="text-xs font-mono text-gray-600 border border-gray-700/50 bg-gray-800/60 px-2 py-0.5">CORE TOOLS</span>
-                    </div>
-                    <div class="p-6 sm:p-8">
-                        <TagCardTech />
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- GitHub Projects Panel -->
         <div id="projects" class="px-4 sm:px-8 pb-4 scroll-mt-4">
             <div class="max-w-6xl mx-auto">
