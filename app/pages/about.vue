@@ -7,23 +7,30 @@
                     <!-- Profile Image -->
                     <div class="flex-shrink-0">
                         <img src="/profile-avatar.jpg"
-                            class="w-48 h-48 rounded-2xl ring-4 ring-green-500/30 object-cover object-center shadow-2xl shadow-green-500/10" />
+                            class="w-48 h-48 rounded-2xl ring-4 ring-blue-500/30 dark:ring-green-500/30 object-cover object-center shadow-2xl shadow-blue-500/10 dark:shadow-green-500/10" />
                     </div>
 
                     <!-- Bio -->
                     <div>
                         <h1
-                            class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                            class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-indigo-500 dark:from-green-400 dark:to-blue-500 bg-clip-text text-transparent">
                             {{ $t('about.title') }}
                         </h1>
-                        <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                        <p class="text-lg text-slate-700 dark:text-gray-300 leading-relaxed mb-4">
                             {{ $t('about.bio1', { name: 'ธนดล อิ่นมะโน (Tanadon Inmano)' }) }}
                         </p>
-                        <p class="text-gray-400 leading-relaxed mb-6">
+                        <p class="text-slate-500 dark:text-gray-400 leading-relaxed mb-4">
                             {{ $t('about.bio2') }}
                         </p>
+                        <!-- Current job badge -->
+                        <div class="flex items-center gap-2 mb-6 text-sm font-mono">
+                            <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                            <span class="text-green-600 dark:text-green-400 font-semibold">Software Developer</span>
+                            <span class="text-slate-400 dark:text-gray-600">@</span>
+                            <span class="text-slate-700 dark:text-gray-300">Muang Thai Capital (MTC)</span>
+                        </div>
                         <a href="/resume.pdf" download
-                            class="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-500 hover:from-blue-700 hover:to-indigo-600 dark:from-green-500 dark:to-blue-500 dark:hover:from-green-600 dark:hover:to-blue-600 px-6 py-2.5 rounded-full font-semibold text-sm text-white transition-all duration-300 transform hover:scale-105 shadow-lg">
                             <i class="fa-solid fa-download"></i>
                             {{ $t('about.downloadResume') }}
                         </a>
@@ -35,20 +42,20 @@
         <!-- Education -->
         <section class="px-8 py-12">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8 text-white">
-                    <i class="fa-solid fa-graduation-cap text-green-400 mr-3"></i>{{ $t('about.education') }}
+                <h2 class="text-3xl font-bold mb-8 text-slate-900 dark:text-white">
+                    <i class="fa-solid fa-graduation-cap text-blue-500 dark:text-green-400 mr-3"></i>{{ $t('about.education') }}
                 </h2>
 
-                <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl border border-slate-700 p-8">
+                <div class="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
                     <div class="flex items-start gap-4">
                         <div
-                            class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-university text-green-400 text-xl"></i>
+                            class="w-12 h-12 bg-blue-500/10 dark:bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-university text-blue-500 dark:text-green-400 text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white">{{ $t('about.university') }}</h3>
-                            <p class="text-green-400 font-medium">{{ $t('about.major') }}</p>
-                            <p class="text-gray-400 text-sm mt-1">{{ $t('about.year') }}</p>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">{{ $t('about.university') }}</h3>
+                            <p class="text-blue-600 dark:text-green-400 font-medium">{{ $t('about.major') }}</p>
+                            <p class="text-slate-500 dark:text-gray-400 text-sm mt-1">{{ $t('about.year') }}</p>
                         </div>
                     </div>
                 </div>
@@ -58,37 +65,37 @@
         <!-- What I Do -->
         <section class="px-8 py-12">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8 text-white">
-                    <i class="fa-solid fa-rocket text-blue-400 mr-3"></i>{{ $t('about.whatIDo') }}
+                <h2 class="text-3xl font-bold mb-8 text-slate-900 dark:text-white">
+                    <i class="fa-solid fa-rocket text-blue-500 dark:text-blue-400 mr-3"></i>{{ $t('about.whatIDo') }}
                 </h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div
-                        class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl border border-slate-700 p-6 hover:border-green-500/30 transition-all duration-300">
-                        <i class="fa-solid fa-code text-3xl text-green-400 mb-4"></i>
-                        <h3 class="text-lg font-bold text-white mb-2">{{ $t('about.fullstack') }}</h3>
-                        <p class="text-gray-400 text-sm">{{ $t('about.fullstackDesc') }}</p>
+                        class="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 p-6 hover:border-blue-500/30 dark:hover:border-green-500/30 transition-all duration-300">
+                        <i class="fa-solid fa-code text-3xl text-blue-500 dark:text-green-400 mb-4"></i>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">{{ $t('about.fullstack') }}</h3>
+                        <p class="text-slate-500 dark:text-gray-400 text-sm">{{ $t('about.fullstackDesc') }}</p>
                     </div>
 
                     <div
-                        class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl border border-slate-700 p-6 hover:border-blue-500/30 transition-all duration-300">
-                        <i class="fa-solid fa-brain text-3xl text-blue-400 mb-4"></i>
-                        <h3 class="text-lg font-bold text-white mb-2">{{ $t('about.ai') }}</h3>
-                        <p class="text-gray-400 text-sm">{{ $t('about.aiDesc') }}</p>
+                        class="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 p-6 hover:border-blue-500/30 dark:hover:border-blue-500/30 transition-all duration-300">
+                        <i class="fa-solid fa-brain text-3xl text-blue-500 dark:text-blue-400 mb-4"></i>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">{{ $t('about.ai') }}</h3>
+                        <p class="text-slate-500 dark:text-gray-400 text-sm">{{ $t('about.aiDesc') }}</p>
                     </div>
 
                     <div
-                        class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl border border-slate-700 p-6 hover:border-purple-500/30 transition-all duration-300">
-                        <i class="fa-solid fa-palette text-3xl text-purple-400 mb-4"></i>
-                        <h3 class="text-lg font-bold text-white mb-2">{{ $t('about.uiux') }}</h3>
-                        <p class="text-gray-400 text-sm">{{ $t('about.uiuxDesc') }}</p>
+                        class="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 p-6 hover:border-indigo-500/30 dark:hover:border-purple-500/30 transition-all duration-300">
+                        <i class="fa-solid fa-palette text-3xl text-indigo-500 dark:text-purple-400 mb-4"></i>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">{{ $t('about.uiux') }}</h3>
+                        <p class="text-slate-500 dark:text-gray-400 text-sm">{{ $t('about.uiuxDesc') }}</p>
                     </div>
 
                     <div
-                        class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl border border-slate-700 p-6 hover:border-cyan-500/30 transition-all duration-300">
-                        <i class="fa-solid fa-server text-3xl text-cyan-400 mb-4"></i>
-                        <h3 class="text-lg font-bold text-white mb-2">{{ $t('about.devops') }}</h3>
-                        <p class="text-gray-400 text-sm">{{ $t('about.devopsDesc') }}</p>
+                        class="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 p-6 hover:border-cyan-500/30 transition-all duration-300">
+                        <i class="fa-solid fa-server text-3xl text-cyan-500 dark:text-cyan-400 mb-4"></i>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">{{ $t('about.devops') }}</h3>
+                        <p class="text-slate-500 dark:text-gray-400 text-sm">{{ $t('about.devopsDesc') }}</p>
                     </div>
                 </div>
             </div>
@@ -97,17 +104,17 @@
         <!-- CTA -->
         <section class="px-8 py-16 text-center">
             <div class="max-w-2xl mx-auto">
-                <h2 class="text-3xl font-bold text-white mb-4">{{ $t('about.cta') }}</h2>
-                <p class="text-gray-400 mb-8">{{ $t('about.ctaDesc') }}</p>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">{{ $t('about.cta') }}</h2>
+                <p class="text-slate-500 dark:text-gray-400 mb-8">{{ $t('about.ctaDesc') }}</p>
                 <div class="flex justify-center gap-4">
-                    <NuxtLink :to="localePath('/') + '#contact'"
-                        class="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-                        {{ $t('hero.contactMe') }}
-                    </NuxtLink>
-                    <NuxtLink :to="localePath('/') + '#projects'"
-                        class="border border-gray-600 hover:border-green-500 px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-green-500/10">
+                    <NuxtLink :to="localePath('/projects')"
+                        class="bg-gradient-to-r from-blue-600 to-indigo-500 hover:from-blue-700 hover:to-indigo-600 dark:from-green-500 dark:to-blue-500 dark:hover:from-green-600 dark:hover:to-blue-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                         {{ $t('about.viewProjects') }}
                     </NuxtLink>
+                    <a href="mailto:framnaver@gmail.com"
+                        class="border border-slate-300 hover:border-blue-500 dark:border-gray-600 dark:hover:border-green-500 text-slate-700 dark:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-blue-500/10 dark:hover:bg-green-500/10">
+                        {{ $t('hero.contactMe') }}
+                    </a>
                 </div>
             </div>
         </section>
