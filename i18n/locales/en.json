@@ -3,7 +3,15 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "chat": "Chat"
+  },
+  "chat": {
+    "intro": "Hi! I'm an AI assistant for this portfolio. Ask me anything about Tanadon — skills, experience, projects, or contact info.",
+    "placeholder": "Ask me anything...",
+    "rateHint": "MAX 15 MESSAGES / HOUR · POWERED BY CLAUDE",
+    "rateLimitError": "Too many messages. Please wait a moment and try again.",
+    "genericError": "Something went wrong. Please try again."
   },
   "hero": {
     "title": "Welcome to My Portfolio",
