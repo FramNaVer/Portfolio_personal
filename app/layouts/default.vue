@@ -44,6 +44,13 @@
               :class="{ 'bg-blue-500 dark:bg-yellow-400': $route.path === localePath('/projects') }"></div>
             {{ $t('nav.projects') }}
           </NuxtLink>
+          <NuxtLink :to="localePath('/chat')"
+            class="flex items-center gap-2.5 px-3 py-2 text-sm font-mono text-slate-500 hover:text-slate-900 hover:bg-slate-100/80 dark:text-gray-500 dark:hover:text-white dark:hover:bg-gray-800/50 transition-all duration-200 group"
+            :class="{ 'text-cyan-600 bg-cyan-50/80 dark:text-cyan-400 dark:bg-gray-800/40': $route.path === localePath('/chat') }">
+            <div class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-cyan-500 dark:bg-gray-700 dark:group-hover:bg-cyan-400 transition-colors"
+              :class="{ 'bg-cyan-500 dark:bg-cyan-400': $route.path === localePath('/chat') }"></div>
+            {{ $t('nav.chat') }}
+          </NuxtLink>
         </div>
       </nav>
 
@@ -129,6 +136,11 @@
             class="flex items-center gap-3 px-4 py-3 font-mono text-sm text-slate-600 hover:text-slate-900 dark:text-gray-300 dark:hover:text-white border border-slate-200/80 hover:border-blue-500/30 dark:border-gray-700/50 dark:hover:border-yellow-500/30 transition-all">
             <div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-gray-600"></div>
             {{ $t('nav.projects') }}
+          </NuxtLink>
+          <NuxtLink :to="localePath('/chat')" @click="mobileMenuOpen = false"
+            class="flex items-center gap-3 px-4 py-3 font-mono text-sm text-slate-600 hover:text-slate-900 dark:text-gray-300 dark:hover:text-white border border-slate-200/80 hover:border-cyan-500/30 dark:border-gray-700/50 dark:hover:border-cyan-500/30 transition-all">
+            <div class="w-2 h-2 rounded-full bg-cyan-400"></div>
+            {{ $t('nav.chat') }}
           </NuxtLink>
 
           <div class="flex gap-2 mt-4">
