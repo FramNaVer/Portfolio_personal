@@ -37,13 +37,13 @@
   },
   "about": {
     "title": "About Me",
-    "bio1": "Hi, I'm {name}, a 4th-year Computer Science student at Maejo University.",
-    "bio2": "I'm passionate about Full Stack Web Development and AI Model Training. I love learning new technologies and applying them to real projects.",
+    "bio1": "Hi, I'm {name}, a Computer Science graduate from Maejo University.",
+    "bio2": "Currently working as a Software Developer at Muang Thai Capital (MTC). Passionate about Full Stack Web Development and AI/ML. I love building systems that work reliably in production.",
     "downloadResume": "Download Resume",
     "education": "Education",
     "university": "Maejo University",
     "major": "Computer Science",
-    "year": "4th Year Student",
+    "year": "Graduate — Class of 2025",
     "whatIDo": "What I Do",
     "fullstack": "Full Stack Development",
     "fullstackDesc": "Building web applications from Frontend to Backend with Vue.js, Nuxt, ASP.NET, and Express.js.",
@@ -56,6 +56,21 @@
     "cta": "Let's Work Together!",
     "ctaDesc": "I'm always ready to learn and create amazing things.",
     "viewProjects": "View Projects"
+  },
+  "operator": {
+    "developerId": "Developer ID",
+    "systemStatus": "System Status",
+    "active": "Active",
+    "commandMode": "Command Mode",
+    "summary": "Developer Summary",
+    "summaryText": "Computer Science graduate from Maejo University. Currently working as a Software Developer at Muang Thai Capital (MTC). Passionate about building scalable web applications and exploring AI/ML.",
+    "coreCapabilities": "Core Capabilities",
+    "education": "Maejo Univ.",
+    "capabilities": ["Web Development", "REST API", "Machine Learning", "Database Design", "UI/UX Figma", "Docker", "Git"],
+    "experienceTimeline": "Experience Timeline",
+    "current": "CURRENT",
+    "intern": "INTERN",
+    "graduate": "GRADUATE"
   },
   "seo": {
     "homeTitle": "Tanadon Inmano | Portfolio",
