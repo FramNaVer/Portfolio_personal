@@ -18,13 +18,9 @@ useHead({
     ]
 })
 
-const { repos, languageStats, fetchRepos } = useGitHub()
+const { repos, languageStats } = useGitHub()
 
 const totalStars = computed(() =>
     repos.value.reduce((sum, r) => sum + (r.stargazers_count || 0), 0)
 )
-
-onMounted(() => {
-    fetchRepos()
-})
 </script>

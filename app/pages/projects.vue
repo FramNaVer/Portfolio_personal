@@ -121,8 +121,4 @@ const { repos, languageStats, loading, error, fetchRepos } = useGitHub()
 const totalStars = computed(() =>
   repos.value.reduce((sum, r) => sum + (r.stargazers_count || 0), 0)
 )
-
-onMounted(() => {
-  fetchRepos()
-})
 </script>
