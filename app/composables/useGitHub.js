@@ -1,8 +1,13 @@
 export const useGitHub = () => {
-  const { data, pending, error, refresh } = useFetch('/api/github', {
-    default: () => [],
-    server: true
-  })
+  const { data, pending, error, refresh } = useAsyncData(
+    'github-repos',
+    () => $fetch('/api/github'),
+    {
+      default: () => [],
+      server: true,
+      lazy: false
+    }
+  )
 
   const repos = computed(() => data.value ?? [])
 
@@ -24,12 +29,5 @@ export const useGitHub = () => {
       .sort((a, b) => b.count - a.count)
   })
 
-  return {
-    repos,
-    pinnedRepos,
-    languageStats,
-    loading: pending,
-    error,
-    fetchRepos: refresh
-  }
+  return { repos, pinnedRepos, languageStats, loading: pending, error, fetchRepos: refresh }
 }
