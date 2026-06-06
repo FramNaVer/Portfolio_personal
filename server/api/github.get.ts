@@ -1,7 +1,4 @@
-const CACHE_TTL = 30 * 60 * 1000
-let cache: { data: any; at: number } | null = null
-
-async function fetchRepos(token?: string) {
+async function fetchFromGitHub(token?: string) {
   return await $fetch<any[]>('https://api.github.com/users/FramNaVer/repos', {
     params: { sort: 'updated', per_page: 30, type: 'owner' },
     headers: {
@@ -11,29 +8,22 @@ async function fetchRepos(token?: string) {
   })
 }
 
-export default defineEventHandler(async () => {
-  if (cache && Date.now() - cache.at < CACHE_TTL) {
-    return cache.data
-  }
-
+export default defineCachedEventHandler(async () => {
   const token = process.env.GITHUB_TOKEN
-  let data: any[]
-
   try {
-    // Try with token first (5000 req/hr), fallback to no token (60 req/hr)
-    data = await fetchRepos(token)
+    return await fetchFromGitHub(token)
   } catch (e: any) {
     if ((e?.status === 401 || e?.status === 403) && token) {
-      // Token invalid or expired — retry without token
-      data = await fetchRepos()
-    } else {
-      throw createError({
-        statusCode: e?.status ?? 500,
-        message: e?.data?.message ?? 'Failed to fetch GitHub repos'
-      })
+      // Token invalid — fallback to unauthenticated (60 req/hr)
+      return await fetchFromGitHub()
     }
+    throw createError({
+      statusCode: e?.status ?? 500,
+      message: e?.data?.message ?? 'Failed to fetch GitHub repos'
+    })
   }
-
-  cache = { data, at: Date.now() }
-  return data
+}, {
+  maxAge: 60 * 30, // 30 min
+  swr: true,       // serve stale while revalidating in background
+  name: 'github-repos'
 })
