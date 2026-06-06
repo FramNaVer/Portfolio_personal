@@ -5,7 +5,8 @@
 
 นี่คือโปรเจกต์ Portfolio ส่วนตัวของผม สร้างขึ้นเพื่อรวบรวมผลงาน, บอกเล่าเกี่ยวกับประสบการณ์ และทักษะการพัฒนาซอฟต์แวร์ของผม โดยใช้ Nuxt.js เป็นเฟรมเวิร์กหลักในการพัฒนา
 
-<img width="2526" height="843" alt="image" src="https://github.com/user-attachments/assets/6a8885fc-63de-490e-9a8c-1ee23fd52981" />
+<img width="1885" height="912" alt="image" src="https://github.com/user-attachments/assets/6d44939c-0696-4529-a05e-3ce89855cf96" />
+
 
 ---
 
