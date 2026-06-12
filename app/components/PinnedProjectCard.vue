@@ -1,6 +1,7 @@
 <template>
   <div
-    class="group flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-4 px-5 sm:px-6 py-4 hover:bg-slate-50/80 dark:hover:bg-gray-800/20 transition-colors duration-150 border-b border-slate-200/50 dark:border-gray-700/30 last:border-0"
+    class="reveal group flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-4 px-5 sm:px-6 py-4 hover:bg-slate-50/80 dark:hover:bg-gray-800/20 transition-colors duration-150 border-b border-slate-200/50 dark:border-gray-700/30 last:border-0"
+    :style="{ animationDelay: `${Math.min(index, 12) * 45}ms` }"
   >
     <!-- Left: dot + name + description -->
     <div class="flex-1 min-w-0">
@@ -49,6 +50,7 @@
 <script setup>
 const props = defineProps({
   repo: { type: Object, required: true },
+  index: { type: Number, default: 0 },
 })
 
 const LANG_COLORS = {

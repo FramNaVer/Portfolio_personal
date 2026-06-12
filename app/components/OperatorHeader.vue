@@ -1,7 +1,7 @@
 <template>
   <div class="px-4 sm:px-8 py-8">
     <div class="max-w-6xl mx-auto">
-      <div class="border border-slate-200/80 bg-white/80 backdrop-blur-sm dark:border-gray-700/60 dark:bg-gray-900/40 overflow-hidden">
+      <div class="reveal border border-slate-200/80 bg-white/80 backdrop-blur-sm dark:border-gray-700/60 dark:bg-gray-900/40 overflow-hidden">
 
         <!-- Status Bar -->
         <div class="flex items-center justify-between px-5 sm:px-6 py-3 border-b border-slate-200/80 bg-slate-50/80 dark:border-gray-700/50 dark:bg-gray-800/30">
@@ -28,16 +28,14 @@
           <!-- Left: Identity + Command Mode + Timeline -->
           <div class="lg:col-span-2 p-6 sm:p-8 border-b lg:border-b-0 lg:border-r border-slate-200/60 dark:border-gray-700/50">
 
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-3 tracking-tight leading-none">
+            <h1 class="reveal text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-3 tracking-tight leading-none" style="animation-delay: 120ms">
               Tanadon Inmano
             </h1>
 
-            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-5 text-sm sm:text-base">
-              <span class="text-slate-600 dark:text-gray-300">Full Stack Developer</span>
-              <span class="text-slate-300 dark:text-gray-600">•</span>
-              <span class="text-slate-600 dark:text-gray-300">AI/ML Enthusiast</span>
-              <span class="text-slate-300 dark:text-gray-600">•</span>
-              <span class="text-slate-600 dark:text-gray-300">Software Developer @ MTC</span>
+            <div class="reveal flex items-center gap-2 mb-5 h-6 text-sm sm:text-base font-mono" style="animation-delay: 200ms">
+              <span class="text-blue-500/70 dark:text-green-500/70 flex-shrink-0">&gt;</span>
+              <span class="text-slate-700 dark:text-gray-200">{{ typedRole }}</span>
+              <span class="inline-block w-2 h-[1.05em] bg-blue-500/70 dark:bg-green-400/80 cursor-blink"></span>
             </div>
 
             <div class="flex items-center gap-2 mb-6 text-slate-500 dark:text-gray-500 text-xs font-mono">
@@ -46,7 +44,7 @@
             </div>
 
             <!-- Command Mode Buttons -->
-            <div class="flex flex-wrap items-center gap-3 mb-6">
+            <div class="reveal flex flex-wrap items-center gap-3 mb-6" style="animation-delay: 280ms">
               <span class="text-xs font-mono text-slate-400 dark:text-gray-600 tracking-widest uppercase">
                 {{ $t('operator.commandMode') }}
               </span>
@@ -64,7 +62,7 @@
             </div>
 
             <!-- Experience Timeline -->
-            <div class="border-t border-slate-200/60 dark:border-gray-700/30 pt-5">
+            <div class="reveal border-t border-slate-200/60 dark:border-gray-700/30 pt-5" style="animation-delay: 360ms">
               <div class="flex items-center justify-between mb-3">
                 <div class="flex items-center gap-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-green-400"></div>
@@ -122,7 +120,7 @@
           </div>
 
           <!-- Right: Summary + Capabilities + Languages + Tools -->
-          <div class="p-6 sm:p-8 flex flex-col gap-5">
+          <div class="reveal p-6 sm:p-8 flex flex-col gap-5" style="animation-delay: 320ms">
 
             <!-- Summary -->
             <div>
@@ -188,21 +186,21 @@
         </div>
 
         <!-- Stats Bar -->
-        <div class="border-t border-slate-200/80 dark:border-gray-700/50 grid grid-cols-2 sm:grid-cols-4 divide-x divide-slate-200/80 dark:divide-gray-700/50">
+        <div class="reveal border-t border-slate-200/80 dark:border-gray-700/50 grid grid-cols-2 sm:grid-cols-4 divide-x divide-slate-200/80 dark:divide-gray-700/50" style="animation-delay: 440ms">
           <div class="px-4 sm:px-6 py-4 text-center">
-            <div class="text-2xl font-bold text-green-500 dark:text-green-400">{{ repoCount || '—' }}</div>
+            <div class="text-2xl font-bold text-green-500 dark:text-green-400 tabular-nums">{{ repoReady ? repoCountUp : '—' }}</div>
             <div class="text-xs font-mono text-slate-400 dark:text-gray-600 uppercase tracking-wider mt-1">
               {{ $t('github.publicRepos') }}
             </div>
           </div>
           <div class="px-4 sm:px-6 py-4 text-center">
-            <div class="text-2xl font-bold text-blue-500 dark:text-blue-400">{{ langCount || '—' }}</div>
+            <div class="text-2xl font-bold text-blue-500 dark:text-blue-400 tabular-nums">{{ langReady ? langCountUp : '—' }}</div>
             <div class="text-xs font-mono text-slate-400 dark:text-gray-600 uppercase tracking-wider mt-1">
               {{ $t('github.languages') }}
             </div>
           </div>
           <div class="px-4 sm:px-6 py-4 text-center">
-            <div class="text-2xl font-bold text-yellow-500 dark:text-yellow-400">{{ totalStars }}</div>
+            <div class="text-2xl font-bold text-yellow-500 dark:text-yellow-400 tabular-nums">{{ starCountUp }}</div>
             <div class="text-xs font-mono text-slate-400 dark:text-gray-600 uppercase tracking-wider mt-1">
               {{ $t('github.totalStars') }}
             </div>
@@ -223,11 +221,24 @@
 <script setup lang="ts">
 const { tm, rt } = useI18n()
 
-defineProps<{
+const props = defineProps<{
   repoCount: number
   langCount: number
   totalStars: number
 }>()
+
+// Rotating typewriter for the role line (#1)
+const roles = [
+  'Full Stack Developer',
+  'AI/ML Enthusiast',
+  'Software Developer @ MTC'
+]
+const { output: typedRole } = useTypewriter(roles)
+
+// Count-up animation for the stat numbers (#4)
+const { value: repoCountUp, ready: repoReady } = useCountUp(toRef(props, 'repoCount'))
+const { value: langCountUp, ready: langReady } = useCountUp(toRef(props, 'langCount'))
+const { value: starCountUp } = useCountUp(toRef(props, 'totalStars'))
 
 const capabilities = computed(() =>
   (tm('operator.capabilities') as any[]).map((fn: any) => rt(fn))

@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto space-y-4">
 
       <!-- Page Header Panel -->
-      <div class="border border-slate-200/80 bg-white/80 dark:border-gray-700/60 dark:bg-gray-900/40 overflow-hidden">
+      <div class="reveal border border-slate-200/80 bg-white/80 dark:border-gray-700/60 dark:bg-gray-900/40 overflow-hidden">
         <div class="flex items-center justify-between px-5 sm:px-6 py-3 border-b border-slate-200/80 bg-slate-50/80 dark:border-gray-700/50 dark:bg-gray-800/30">
           <div class="flex items-center gap-2">
             <div class="w-2 h-2 rounded-full bg-yellow-400"></div>
@@ -27,15 +27,15 @@
         <!-- Stats row -->
         <div class="grid grid-cols-3 divide-x divide-slate-200/80 dark:divide-gray-700/50">
           <div class="px-5 py-3 text-center">
-            <div class="text-xl font-bold text-green-500 dark:text-green-400 font-mono">{{ repos.length || '—' }}</div>
+            <div class="text-xl font-bold text-green-500 dark:text-green-400 font-mono tabular-nums">{{ repoReady ? repoCountUp : '—' }}</div>
             <div class="text-xs font-mono text-slate-400 dark:text-gray-600 uppercase tracking-wider mt-0.5">{{ $t('github.publicRepos') }}</div>
           </div>
           <div class="px-5 py-3 text-center">
-            <div class="text-xl font-bold text-yellow-500 dark:text-yellow-400 font-mono">{{ totalStars }}</div>
+            <div class="text-xl font-bold text-yellow-500 dark:text-yellow-400 font-mono tabular-nums">{{ starCountUp }}</div>
             <div class="text-xs font-mono text-slate-400 dark:text-gray-600 uppercase tracking-wider mt-0.5">{{ $t('github.totalStars') }}</div>
           </div>
           <div class="px-5 py-3 text-center">
-            <div class="text-xl font-bold text-blue-500 dark:text-blue-400 font-mono">{{ languageStats.length || '—' }}</div>
+            <div class="text-xl font-bold text-blue-500 dark:text-blue-400 font-mono tabular-nums">{{ langReady ? langCountUp : '—' }}</div>
             <div class="text-xs font-mono text-slate-400 dark:text-gray-600 uppercase tracking-wider mt-0.5">{{ $t('github.languages') }}</div>
           </div>
         </div>
@@ -59,7 +59,7 @@
       </div>
 
       <!-- Repository List -->
-      <div v-else class="border border-slate-200/80 bg-white/60 dark:border-gray-700/60 dark:bg-gray-900/20 overflow-hidden">
+      <div v-else class="reveal border border-slate-200/80 bg-white/60 dark:border-gray-700/60 dark:bg-gray-900/20 overflow-hidden" style="animation-delay: 100ms">
 
         <!-- Panel header -->
         <div class="flex items-center justify-between px-5 sm:px-6 py-3 border-b border-slate-200/80 bg-slate-50/60 dark:border-gray-700/50 dark:bg-gray-800/20">
@@ -84,13 +84,13 @@
 
         <!-- Rows -->
         <div>
-          <PinnedProjectCard v-for="repo in repos" :key="repo.id" :repo="repo" />
+          <PinnedProjectCard v-for="(repo, i) in repos" :key="repo.id" :repo="repo" :index="i" />
         </div>
 
       </div>
 
       <!-- Language Usage Panel -->
-      <div v-if="languageStats.length" class="border border-slate-200/80 bg-white/60 dark:border-gray-700/60 dark:bg-gray-900/20 overflow-hidden">
+      <div v-if="languageStats.length" class="reveal border border-slate-200/80 bg-white/60 dark:border-gray-700/60 dark:bg-gray-900/20 overflow-hidden" style="animation-delay: 200ms">
         <div class="flex items-center justify-between px-5 sm:px-6 py-3 border-b border-slate-200/80 bg-slate-50/60 dark:border-gray-700/50 dark:bg-gray-800/20">
           <div class="flex items-center gap-2">
             <div class="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400"></div>
@@ -121,4 +121,9 @@ const { repos, languageStats, loading, error, fetchRepos } = useGitHub()
 const totalStars = computed(() =>
   repos.value.reduce((sum, r) => sum + (r.stargazers_count || 0), 0)
 )
+
+// Count-up animation for the stat numbers
+const { value: repoCountUp, ready: repoReady } = useCountUp(computed(() => repos.value.length))
+const { value: langCountUp, ready: langReady } = useCountUp(computed(() => languageStats.value.length))
+const { value: starCountUp } = useCountUp(totalStars)
 </script>

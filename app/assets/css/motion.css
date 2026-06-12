@@ -1,0 +1,31 @@
+/* Shared motion utilities — used across pages/components.
+   All effects collapse to a static state under prefers-reduced-motion. */
+
+/* Entrance cascade: fade + slide up. Pair with an inline animation-delay
+   for a staggered reveal. */
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  opacity: 0;
+  animation: reveal-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Terminal-style blinking cursor for the typewriter. */
+@keyframes cursor-blink {
+  0%, 50%      { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.cursor-blink {
+  animation: cursor-blink 1.05s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  .cursor-blink { animation: none; }
+}

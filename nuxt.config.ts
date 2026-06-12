@@ -16,7 +16,8 @@ export default defineNuxtConfig({
     fallback: 'dark'
   },
   css: [
-    '@fortawesome/fontawesome-free/css/all.css'
+    '@fortawesome/fontawesome-free/css/all.css',
+    '~/assets/css/motion.css'
   ],
   i18n: {
     locales: [
