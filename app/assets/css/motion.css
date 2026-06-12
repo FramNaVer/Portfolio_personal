@@ -21,6 +21,22 @@
   animation: cursor-blink 1.05s steps(1) infinite;
 }
 
+/* Scroll-triggered reveal (applied via the v-reveal directive).
+   Hidden state ships in the SSR HTML so there's no flash; the directive adds
+   .is-visible when the element scrolls into view. Stagger with v-reveal="{ delay }". */
+.v-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.v-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
@@ -28,4 +44,9 @@
     animation: none;
   }
   .cursor-blink { animation: none; }
+  .v-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

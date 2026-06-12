@@ -5,13 +5,13 @@
             <div class="max-w-4xl mx-auto">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <!-- Profile Image -->
-                    <div class="flex-shrink-0">
+                    <div v-reveal class="flex-shrink-0">
                         <img src="/profile-avatar.jpg"
                             class="w-48 h-48 rounded-2xl ring-4 ring-blue-500/30 dark:ring-green-500/30 object-cover object-center shadow-2xl shadow-blue-500/10 dark:shadow-green-500/10" />
                     </div>
 
                     <!-- Bio -->
-                    <div>
+                    <div v-reveal="{ delay: 120 }">
                         <h1
                             class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-indigo-500 dark:from-green-400 dark:to-blue-500 bg-clip-text text-transparent">
                             {{ $t('about.title') }}
@@ -42,11 +42,11 @@
         <!-- Education -->
         <section class="px-8 py-12">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8 text-slate-900 dark:text-white">
+                <h2 v-reveal class="text-3xl font-bold mb-8 text-slate-900 dark:text-white">
                     <i class="fa-solid fa-graduation-cap text-blue-500 dark:text-green-400 mr-3"></i>{{ $t('about.education') }}
                 </h2>
 
-                <div class="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
+                <div v-reveal="{ delay: 80 }" class="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
                     <div class="flex items-start gap-4">
                         <div
                             class="w-12 h-12 bg-blue-500/10 dark:bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -65,33 +65,33 @@
         <!-- What I Do -->
         <section class="px-8 py-12">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8 text-slate-900 dark:text-white">
+                <h2 v-reveal class="text-3xl font-bold mb-8 text-slate-900 dark:text-white">
                     <i class="fa-solid fa-rocket text-blue-500 dark:text-blue-400 mr-3"></i>{{ $t('about.whatIDo') }}
                 </h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div
+                    <div v-reveal
                         class="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 p-6 hover:border-blue-500/30 dark:hover:border-green-500/30 transition-all duration-300">
                         <i class="fa-solid fa-code text-3xl text-blue-500 dark:text-green-400 mb-4"></i>
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">{{ $t('about.fullstack') }}</h3>
                         <p class="text-slate-500 dark:text-gray-400 text-sm">{{ $t('about.fullstackDesc') }}</p>
                     </div>
 
-                    <div
+                    <div v-reveal="{ delay: 80 }"
                         class="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 p-6 hover:border-blue-500/30 dark:hover:border-blue-500/30 transition-all duration-300">
                         <i class="fa-solid fa-brain text-3xl text-blue-500 dark:text-blue-400 mb-4"></i>
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">{{ $t('about.ai') }}</h3>
                         <p class="text-slate-500 dark:text-gray-400 text-sm">{{ $t('about.aiDesc') }}</p>
                     </div>
 
-                    <div
+                    <div v-reveal="{ delay: 160 }"
                         class="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 p-6 hover:border-indigo-500/30 dark:hover:border-purple-500/30 transition-all duration-300">
                         <i class="fa-solid fa-palette text-3xl text-indigo-500 dark:text-purple-400 mb-4"></i>
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">{{ $t('about.uiux') }}</h3>
                         <p class="text-slate-500 dark:text-gray-400 text-sm">{{ $t('about.uiuxDesc') }}</p>
                     </div>
 
-                    <div
+                    <div v-reveal="{ delay: 240 }"
                         class="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 p-6 hover:border-cyan-500/30 transition-all duration-300">
                         <i class="fa-solid fa-server text-3xl text-cyan-500 dark:text-cyan-400 mb-4"></i>
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">{{ $t('about.devops') }}</h3>
@@ -103,7 +103,7 @@
 
         <!-- CTA -->
         <section class="px-8 py-16 text-center">
-            <div class="max-w-2xl mx-auto">
+            <div v-reveal class="max-w-2xl mx-auto">
                 <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">{{ $t('about.cta') }}</h2>
                 <p class="text-slate-500 dark:text-gray-400 mb-8">{{ $t('about.ctaDesc') }}</p>
                 <div class="flex justify-center gap-4">
