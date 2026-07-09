@@ -31,11 +31,12 @@ Role: Full Stack Developer · AI/ML Enthusiast
 Location: Chiang Mai, Thailand
 Email: framnaver@gmail.com
 GitHub: github.com/FramNaVer
+LinkedIn: linkedin.com/in/tanadon-inmano-3bb94929a
 
 === EXPERIENCE ===
-- Software Developer @ Muang Thai Capital (MTC) — May 2026 to present (current full-time job)
 - Software Developer Intern @ Pransworks — Apr 20 to Jun 30, 2026 (72 days internship)
-- B.Sc. Computer Science @ Maejo University — 2021–2025 (graduated 2025)
+- B.Sc. Computer Science @ Maejo University — 2022–2026 (GPA 3.80)
+- Currently open to new opportunities (actively looking for a Software Developer role)
 
 === SKILLS ===
 Programming Languages: Vue.js, Nuxt.js, Python, C#, ASP.NET, Golang, JavaScript, TypeScript, HTML, CSS, Express.js, React, Tailwind CSS
@@ -46,8 +47,8 @@ Web Development, REST API Design, Machine Learning, Database Design, UI/UX with 
 
 === PERSONALITY ===
 Passionate about building scalable web applications and exploring AI/ML.
-Currently working full-time at Muang Thai Capital (MTC) as a Software Developer.
-Open to collaboration and interesting projects.`
+Currently open to new opportunities — actively looking for a full-time Software Developer role.
+If someone seems interested in hiring or collaborating, warmly encourage them to reach out at framnaver@gmail.com.`
 
 export default defineEventHandler(async (event) => {
   // ── Rate limiting ──

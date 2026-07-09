@@ -46,12 +46,13 @@
   "about": {
     "title": "เกี่ยวกับผม",
     "bio1": "สวัสดีครับ ผม {name} บัณฑิตสาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้",
-    "bio2": "ปัจจุบันทำงานเป็น Software Developer ที่เมืองไทยแคปปิตอล (MTC) หลงใหลในงาน Full Stack Web Development และ AI/ML ชอบสร้างระบบที่ทำงานได้จริงใน production",
+    "bio2": "หลงใหลในงาน Full Stack Web Development และ AI/ML ชอบสร้างระบบที่ทำงานได้จริงใน production มีประสบการณ์ฝึกงานเป็น Software Developer และตอนนี้กำลังเปิดรับโอกาสงานใหม่",
+    "openToWork": "เปิดรับโอกาสงานใหม่",
     "downloadResume": "ดาวน์โหลด Resume",
     "education": "การศึกษา",
     "university": "มหาวิทยาลัยแม่โจ้",
     "major": "สาขาวิทยาการคอมพิวเตอร์",
-    "year": "บัณฑิต — รุ่นปี 2568",
+    "year": "บัณฑิต — รุ่นปี 2568 · GPA 3.80",
     "whatIDo": "สิ่งที่ผมทำ",
     "fullstack": "Full Stack Development",
     "fullstackDesc": "พัฒนาเว็บแอปพลิเคชันตั้งแต่ Frontend ไปจนถึง Backend ด้วย Vue.js, Nuxt, ASP.NET และ Express.js",
@@ -71,9 +72,9 @@
     "active": "พร้อมทำงาน",
     "commandMode": "โหมดการทำงาน",
     "summary": "สรุปข้อมูล",
-    "summaryText": "บัณฑิตสาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้ ปัจจุบันทำงานเป็น Software Developer ที่เมืองไทยแคปปิตอล (MTC) หลงใหลในการพัฒนาเว็บแอปพลิเคชันและ AI/ML",
+    "summaryText": "บัณฑิตสาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้ มีประสบการณ์ฝึกงานเป็น Software Developer หลงใหลในการพัฒนาเว็บแอปพลิเคชันและ AI/ML กำลังเปิดรับโอกาสงานใหม่",
     "coreCapabilities": "ความสามารถหลัก",
-    "education": "ม.แม่โจ้",
+    "education": "GPA · ม.แม่โจ้",
     "capabilities": ["Web Development", "REST API", "Machine Learning", "Database Design", "UI/UX Figma", "Docker", "Git"],
     "experienceTimeline": "ประสบการณ์",
     "current": "ปัจจุบัน",
@@ -84,6 +85,6 @@
     "homeTitle": "Tanadon Inmano | Portfolio",
     "homeDescription": "Portfolio ของ ธนดล อิ่นมะโน - Full Stack Developer & AI Enthusiast",
     "aboutTitle": "เกี่ยวกับ | Tanadon Inmano",
-    "aboutDescription": "เรียนรู้เพิ่มเติมเกี่ยวกับ ธนดล อิ่นมะโน - นักศึกษาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้"
+    "aboutDescription": "เรียนรู้เพิ่มเติมเกี่ยวกับ ธนดล อิ่นมะโน - บัณฑิตวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้ เปิดรับโอกาสงานใหม่"
   }
 }

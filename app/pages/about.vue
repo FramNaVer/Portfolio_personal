@@ -22,12 +22,10 @@
                         <p class="text-slate-500 dark:text-gray-400 leading-relaxed mb-4">
                             {{ $t('about.bio2') }}
                         </p>
-                        <!-- Current job badge -->
+                        <!-- Open to work badge -->
                         <div class="flex items-center gap-2 mb-6 text-sm font-mono">
                             <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                            <span class="text-green-600 dark:text-green-400 font-semibold">Software Developer</span>
-                            <span class="text-slate-400 dark:text-gray-600">@</span>
-                            <span class="text-slate-700 dark:text-gray-300">Muang Thai Capital (MTC)</span>
+                            <span class="text-green-600 dark:text-green-400 font-semibold">{{ $t('about.openToWork') }}</span>
                         </div>
                         <a href="/resume.pdf" download
                             class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-500 hover:from-blue-700 hover:to-indigo-600 dark:from-green-500 dark:to-blue-500 dark:hover:from-green-600 dark:hover:to-blue-600 px-6 py-2.5 rounded-full font-semibold text-sm text-white transition-all duration-300 transform hover:scale-105 shadow-lg">
@@ -106,7 +104,7 @@
             <div v-reveal class="max-w-2xl mx-auto">
                 <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">{{ $t('about.cta') }}</h2>
                 <p class="text-slate-500 dark:text-gray-400 mb-8">{{ $t('about.ctaDesc') }}</p>
-                <div class="flex justify-center gap-4">
+                <div class="flex flex-wrap justify-center gap-4">
                     <NuxtLink :to="localePath('/projects')"
                         class="bg-gradient-to-r from-blue-600 to-indigo-500 hover:from-blue-700 hover:to-indigo-600 dark:from-green-500 dark:to-blue-500 dark:hover:from-green-600 dark:hover:to-blue-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                         {{ $t('about.viewProjects') }}
@@ -114,6 +112,11 @@
                     <a href="mailto:framnaver@gmail.com"
                         class="border border-slate-300 hover:border-blue-500 dark:border-gray-600 dark:hover:border-green-500 text-slate-700 dark:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-blue-500/10 dark:hover:bg-green-500/10">
                         {{ $t('hero.contactMe') }}
+                    </a>
+                    <a href="https://www.linkedin.com/in/tanadon-inmano-3bb94929a/" target="_blank"
+                        class="inline-flex items-center gap-2 border border-slate-300 hover:border-blue-500 dark:border-gray-600 dark:hover:border-blue-400 text-slate-700 dark:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-blue-500/10 dark:hover:bg-blue-500/10">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        LinkedIn
                     </a>
                 </div>
             </div>

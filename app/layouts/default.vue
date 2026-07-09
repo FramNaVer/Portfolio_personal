@@ -85,6 +85,10 @@
               class="text-slate-400 hover:text-slate-900 dark:text-gray-600 dark:hover:text-white transition-colors">
               <i class="fa-brands fa-github text-sm"></i>
             </a>
+            <a href="https://www.linkedin.com/in/tanadon-inmano-3bb94929a/" target="_blank"
+              class="text-slate-400 hover:text-blue-600 dark:text-gray-600 dark:hover:text-blue-400 transition-colors">
+              <i class="fa-brands fa-linkedin-in text-sm"></i>
+            </a>
             <a href="mailto:framnaver@gmail.com" class="text-slate-400 hover:text-slate-900 dark:text-gray-600 dark:hover:text-white transition-colors">
               <i class="fa-solid fa-envelope text-sm"></i>
             </a>
@@ -154,6 +158,21 @@
               ]">
               {{ loc.code.toUpperCase() }}
             </button>
+          </div>
+
+          <div class="flex justify-center gap-6 mt-6">
+            <a href="https://github.com/FramNaVer" target="_blank"
+              class="text-slate-400 hover:text-slate-900 dark:text-gray-500 dark:hover:text-white transition-colors">
+              <i class="fa-brands fa-github text-xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/tanadon-inmano-3bb94929a/" target="_blank"
+              class="text-slate-400 hover:text-blue-600 dark:text-gray-500 dark:hover:text-blue-400 transition-colors">
+              <i class="fa-brands fa-linkedin-in text-xl"></i>
+            </a>
+            <a href="mailto:framnaver@gmail.com"
+              class="text-slate-400 hover:text-slate-900 dark:text-gray-500 dark:hover:text-white transition-colors">
+              <i class="fa-solid fa-envelope text-xl"></i>
+            </a>
           </div>
         </div>
       </div>

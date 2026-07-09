@@ -80,14 +80,6 @@
 <script setup lang="ts">
 const entries = [
   {
-    period: 'พ.ค. 2026\n— ปัจจุบัน',
-    company: 'Muang Thai Capital (MTC)',
-    role: 'Software Developer',
-    description: 'เมืองไทยแคปปิตอล · Full-time',
-    type: 'work',
-    current: true
-  },
-  {
     period: '20 เม.ย.\n—  30 มิ.ย. 2026',
     company: 'Pransworks',
     role: 'Software Developer Intern',
@@ -96,7 +88,7 @@ const entries = [
     current: false
   },
   {
-    period: '2021\n— 2025',
+    period: '2022\n— 2026',
     company: 'มหาวิทยาลัยแม่โจ้',
     role: 'วิทยาการคอมพิวเตอร์',
     description: 'Maejo University · Computer Science · บัณฑิต รุ่นปี 2568',
